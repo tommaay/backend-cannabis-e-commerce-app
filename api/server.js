@@ -1,5 +1,5 @@
 const express = require('express');
-const middleware = require('../middleware/mwConfig');
+const middleware = require('../config/mwConfig');
 const server = express();
 
 middleware(server);
