@@ -1,0 +1,42 @@
+{
+    "name": "Backend-Cannabis-E-Commerce-App",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "nodemon index.js",
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tommaay/Backend-Cannabis-E-Commerce-App.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tommaay/Backend-Cannabis-E-Commerce-App/issues"
+    },
+    "homepage": "https://github.com/tommaay/Backend-Cannabis-E-Commerce-App#readme",
+    "dependencies": {
+        "apidoc": "^0.17.7",
+        "bcryptjs": "^2.4.3",
+        "cloudinary": "^1.14.0",
+        "cors": "^2.8.5",
+        "datauri": "^2.0.0",
+        "dotenv": "^8.0.0",
+        "express": "^4.17.0",
+        "faker": "^4.1.0",
+        "helmet": "^3.18.0",
+        "jsonwebtoken": "^8.5.1",
+        "knex": "^0.17.0-next3",
+        "morgan": "^1.9.1",
+        "multer": "^1.4.1",
+        "pg": "^7.11.0",
+        "sqlite3": "^4.0.8"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.0"
+    }
+}
