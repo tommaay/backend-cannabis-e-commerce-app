@@ -1,10 +1,10 @@
 const express = require('express');
-const middleware = require('../middleware/serverConfig');
+const serverConfig = require('../middleware/serverConfig');
 const server = express();
 const usersModel = require('../data/model/usersModel');
 const errorHandler = require('../middleware/errorHandler');
 
-middleware(server);
+serverConfig(server);
 
 server.get('/', (req, res) => {
     res.send('Sanity check passed!');
@@ -12,7 +12,7 @@ server.get('/', (req, res) => {
 
 server.get('/users', async (req, res, next) => {
     try {
-        const users = usersModel.getAll();
+        const users = await usersModel.getAll();
         res.status(200).json(users);
     } catch (err) {
         next(err);

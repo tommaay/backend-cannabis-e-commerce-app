@@ -7,7 +7,7 @@ exports.seed = function(knex, Promise) {
             return knex('categories').insert([
                 {
                     name: 'Edibles',
-                    description: `Our edibles are the easiest way to dose efficiently and consistently. With these, any day can be a relaxed and trusted experience.	Before you realize, you'll be hungry for more.`,
+                    description: `Our edibles are the easiest way to dose efficiently and consistently. With these, any day can be a relaxed and trusted experience. Before you realize, you'll be hungry for more.`,
                 },
                 {
                     name: 'Ready to Roll',
@@ -35,7 +35,7 @@ exports.seed = function(knex, Promise) {
                 },
                 {
                     name: 'Prerolls',
-                    description: `Looking for the ultimate convenience that can be shared with friends on a moment's notice? With these organic prerolls, you'll be ready to pass one to the left whenever the occasion calls – your friends will love you a little bit more too.`,
+                    description: `Looking for the ultimate convenience that can be shared with friends on a moment's notice? With these organic prerolls, you'll be ready to pass one to the left whenever the occasion calls. Your friends will love you a little bit more too.`,
                 },
                 {
                     name: 'Cartridges',

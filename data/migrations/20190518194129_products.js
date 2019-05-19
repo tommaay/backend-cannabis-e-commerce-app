@@ -1,12 +1,12 @@
 exports.up = function(knex, Promise) {
-    return knex.schema.createTable('products', field => {
-        field.increments();
-        field.string('name').notNullable();
-        field.string('description', 2000).notNullable();
-        field.string('image').notNullable();
-        field.string('thc').notNullable();
-        field.string('cbd').notNullable();
-        field
+    return knex.schema.createTable('products', table => {
+        table.increments();
+        table.string('name').notNullable();
+        table.string('description', 2000).notNullable();
+        table.string('image').notNullable();
+        table.string('thc').notNullable();
+        table.string('cbd').notNullable();
+        table
             .string('category')
             .unsigned()
             .notNullable()
@@ -14,7 +14,7 @@ exports.up = function(knex, Promise) {
             .inTable('categories')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
-        field
+        table
             .string('type')
             .unsigned()
             .notNullable()

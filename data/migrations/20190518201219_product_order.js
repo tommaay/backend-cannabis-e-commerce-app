@@ -1,7 +1,7 @@
 exports.up = function(knex, Promise) {
-    return knex.schema.createTable('product_order', field => {
-        field.increments();
-        field
+    return knex.schema.createTable('product_orders', table => {
+        table.increments();
+        table
             .integer('order_id')
             .unsigned()
             .notNullable()
@@ -9,7 +9,7 @@ exports.up = function(knex, Promise) {
             .inTable('orders')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
-        field
+        table
             .integer('product_id')
             .unsigned()
             .notNullable()
@@ -17,7 +17,7 @@ exports.up = function(knex, Promise) {
             .inTable('products')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
-        field
+        table
             .integer('price_id')
             .unsigned()
             .notNullable()
@@ -25,11 +25,11 @@ exports.up = function(knex, Promise) {
             .inTable('prices')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
-        field.integer('number_of_units').notNullable();
-        field.integer('total').notNullable();
+        table.integer('number_of_units').notNullable();
+        table.integer('total').notNullable();
     });
 };
 
 exports.down = function(knex, Promise) {
-    return knex.schema.dropTableIfExists('product_order');
+    return knex.schema.dropTableIfExists('product_orders');
 };

@@ -1,7 +1,7 @@
 exports.up = function(knex, Promise) {
-    return knex.schema.createTable('orders', field => {
-        field.increments();
-        field
+    return knex.schema.createTable('orders', table => {
+        table.increments();
+        table
             .integer('user_id')
             .unsigned()
             .notNullable()
@@ -9,9 +9,9 @@ exports.up = function(knex, Promise) {
             .inTable('users')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
-        field.integer('subtotal').notNullable();
-        field.integer('tax').notNullable();
-        field.integer('total').notNullable();
+        table.integer('subtotal').notNullable();
+        table.integer('tax').notNullable();
+        table.integer('total').notNullable();
     });
 };
 
