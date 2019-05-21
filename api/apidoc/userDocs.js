@@ -34,9 +34,8 @@
  * @api {get} /api/users/:id Get user by ID
  * @apiGroup Users
  * @apiParam {Number} id The user's ID
- * @apiSuccess {Object} user Object containing the user's info
+ * @apiSuccess {Object} user Blah Balh
  * @apiSuccessExample {json} Success Response:
- * @apiError UserNotFound The user id was not found
  *      HTTP/1.1 200 OK
  *      {
  *          "id": 1,
@@ -49,4 +48,5 @@
  *          "birthday": 511171200000,
  *          "is_admin": 1
  *      }
+ * @apiError {404} UserNotFound The <code>id</code> of the User was not found.
  */
