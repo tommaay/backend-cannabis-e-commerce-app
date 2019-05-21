@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // usersModel contains the functions to get data from the users table
-const usersModel = require('../../data/model/usersModel');
+const usersModel = require('../model/usersModel');
 
 router.get('/', async (req, res, next) => {
     try {
