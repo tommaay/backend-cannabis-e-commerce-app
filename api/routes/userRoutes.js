@@ -43,7 +43,7 @@ router.post('/login', async (req, res, next) => {
 });
 
 // get list of all users
-router.get('/', async (req, res, next) => {
+router.get('/', usersModel.protectedAdmin, async (req, res, next) => {
     try {
         const users = await usersModel.getAll();
         res.status(200).json(users);

@@ -9,6 +9,7 @@ exports.seed = function(knex, Promise) {
                 { name: 'Sativa' },
                 { name: 'Indica' },
                 { name: 'CBD' },
+                { name: 'Accessories' },
             ]);
         });
 };

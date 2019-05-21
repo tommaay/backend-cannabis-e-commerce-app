@@ -10,6 +10,7 @@ module.exports = {
     update,
     generateToken,
     protected,
+    protectedAdmin,
 };
 
 // register a new user
@@ -98,18 +99,42 @@ function generateToken(user) {
 
 // protect routes for logged in users
 function protected(req, res, next) {
-    const token = req.header.authorization;
+    const token = req.headers.authorization;
 
     if (token) {
         jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {
             if (err) {
-                res.status(401).json({ message: 'Invalid token' });
+                res.status(401).json({ error: 'Invalid token' });
             } else {
                 req.token = decodedToken;
                 next();
             }
         });
     } else {
-        res.status(401).json({ message: 'Unauthorized: No token provided' });
+        res.status(401).json({ error: 'Unauthorized: No token provided' });
+    }
+}
+
+// protect routes for admins only
+function protectedAdmin(req, res, next) {
+    const token = req.headers.authorization;
+
+    if (token) {
+        jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {
+            if (err) {
+                res.status(401).json({ error: 'Invalid token' });
+            } else {
+                req.token = decodedToken;
+                if (req.token.is_admin === 1) {
+                    console.log('token', req.token.is_admin);
+                    next();
+                } else {
+                    console.log('token', req.token.is_admin);
+                    res.status(401).json({ error: 'Unauthorized permissions' });
+                }
+            }
+        });
+    } else {
+        res.status(401).json({ error: 'Unauthorized: No token provided' });
     }
 }

@@ -3,14 +3,14 @@ exports.up = function(knex, Promise) {
         table.increments();
         table.string('name').notNullable();
         table.string('description', 2000).notNullable();
-        table.string('image').notNullable();
+        table.string('image', 5000).notNullable();
         table.string('thc').notNullable();
         table.string('cbd').notNullable();
         table
             .string('category')
             .unsigned()
             .notNullable()
-            .references('name')
+            .references('id')
             .inTable('categories')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
@@ -18,7 +18,7 @@ exports.up = function(knex, Promise) {
             .string('type')
             .unsigned()
             .notNullable()
-            .references('name')
+            .references('id')
             .inTable('types')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
