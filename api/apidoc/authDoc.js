@@ -1,5 +1,5 @@
 /**
- * @api {post} /api/auth/register Create a new user
+ * @api {post} /api/users/register Create a new user
  * @apiGroup Authentication
  * @apiParam {String} firstname The user's first name
  * @apiParam {String} lastname The user's last name
@@ -26,7 +26,7 @@
  */
 
 /**
- * @api {post} /api/auth/login User login
+ * @api {post} /api/users/login User login
  * @apiGroup Authentication
  * @apiParam {String} email Email
  * @apiParam {String} password Password
