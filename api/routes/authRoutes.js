@@ -5,11 +5,12 @@ const authModel = require('../model/authModel');
 
 router.post('/register', async (req, res, next) => {
     const userInfo = req.body;
+    // hash the password to be stored in the database
     const hashedPassword = bcrypt.hashSync(userInfo.password, 11);
     userInfo.password = hashedPassword;
 
     try {
-        const registeredUser = authModel.register(userInfo);
+        const registeredUser = await authModel.register(userInfo);
         const token = authModel.generateToken(registeredUser);
 
         res.status(201).json({ user: registeredUser, token: token });
@@ -22,10 +23,11 @@ router.post('/login', async (req, res, next) => {
     const loginCreds = req.body;
 
     try {
-        const user = authModel.login(loginCreds);
+        const user = await authModel.login(loginCreds);
 
+        // check to see if password is valid for the email
         if (user && bcrypt.compareSync(loginCreds.password, user.password)) {
-            const token = authModel.generateToken(user);
+            const token = await authModel.generateToken(user);
 
             res.status(202).json({ user: user, token: token });
         } else {
