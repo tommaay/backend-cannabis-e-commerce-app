@@ -36,6 +36,7 @@
  * @apiParam {Number} id The user's ID
  * @apiSuccess {Object} user Object containing the user's info
  * @apiSuccessExample {json} Success Response:
+ * @apiError UserNotFound The user id was not found
  *      HTTP/1.1 200 OK
  *      {
  *          "id": 1,
