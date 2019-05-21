@@ -33,7 +33,7 @@ router.post('/login', async (req, res, next) => {
         if (user && bcrypt.compareSync(loginCreds.password, user.password)) {
             const token = await usersModel.generateToken(user);
 
-            res.status(202).json({ user: user, token: token });
+            res.status(202).json({ user: user[0], token: token });
         } else {
             res.status(401).json({ error: 'Unauthorized credentials' });
         }
@@ -43,7 +43,7 @@ router.post('/login', async (req, res, next) => {
 });
 
 // get list of all users
-router.get('/', usersModel.protectedAdmin, async (req, res, next) => {
+router.get('/', async (req, res, next) => {
     try {
         const users = await usersModel.getAll();
         res.status(200).json(users);
@@ -69,7 +69,7 @@ router.get('/:id', async (req, res, next) => {
 });
 
 // delete user
-router.delete('/delete/:id', async (req, res, next) => {
+router.delete('/:id', async (req, res, next) => {
     const id = req.params.id;
 
     try {
@@ -86,7 +86,7 @@ router.delete('/delete/:id', async (req, res, next) => {
 });
 
 // update user
-router.patch('/update/:id', async (req, res, next) => {
+router.patch('/:id', async (req, res, next) => {
     const id = req.params.id;
     const updatedInfo = req.body;
 

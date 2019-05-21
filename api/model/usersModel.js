@@ -9,15 +9,18 @@ module.exports = {
     deleteUser,
     update,
     generateToken,
-    protected,
+    protectedUser,
     protectedAdmin,
 };
 
 // register a new user
-function register(userInfo) {
+async function register(userInfo) {
+    const user = await db('users').insert(userInfo);
+    const id = parseInt(user[0]);
+
     return db('users')
-        .insert(userInfo)
-        .returning(userInfo);
+        .where({ id: id })
+        .first();
 }
 
 // user login
@@ -98,7 +101,7 @@ function generateToken(user) {
 }
 
 // protect routes for logged in users
-function protected(req, res, next) {
+function protectedUser(req, res, next) {
     const token = req.headers.authorization;
 
     if (token) {
@@ -107,7 +110,11 @@ function protected(req, res, next) {
                 res.status(401).json({ error: 'Invalid token' });
             } else {
                 req.token = decodedToken;
-                next();
+                if (req.token.is_admin === 0) {
+                    next();
+                } else {
+                    res.status(401).json({ error: 'Unauthorized permissions' });
+                }
             }
         });
     } else {
@@ -126,10 +133,8 @@ function protectedAdmin(req, res, next) {
             } else {
                 req.token = decodedToken;
                 if (req.token.is_admin === 1) {
-                    console.log('token', req.token.is_admin);
                     next();
                 } else {
-                    console.log('token', req.token.is_admin);
                     res.status(401).json({ error: 'Unauthorized permissions' });
                 }
             }

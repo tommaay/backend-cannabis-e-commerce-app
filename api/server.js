@@ -6,6 +6,7 @@ serverConfig(server);
 
 // importing routes
 const userRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/productRoutes');
 
 // sanity check
 server.get('/', (req, res) => {
@@ -14,6 +15,7 @@ server.get('/', (req, res) => {
 
 // routers
 server.use('/api/users', userRoutes);
+server.use('/api/products', productRoutes);
 
 // default error handler
 server.use(errorHandler);

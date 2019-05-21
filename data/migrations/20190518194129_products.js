@@ -7,7 +7,7 @@ exports.up = function(knex, Promise) {
         table.string('thc').notNullable();
         table.string('cbd').notNullable();
         table
-            .string('category')
+            .integer('category')
             .unsigned()
             .notNullable()
             .references('id')
@@ -15,7 +15,7 @@ exports.up = function(knex, Promise) {
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
         table
-            .string('type')
+            .integer('type')
             .unsigned()
             .notNullable()
             .references('id')

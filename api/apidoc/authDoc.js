@@ -11,7 +11,7 @@
  * @apiParam {Boolean} is_admin Set to True if the user is an admin
  * @apiSuccess {Object} user Object containing the user's info
  * @apiSuccessExample {json} Success Response:
- *      HTTP/1.1 201 Created
+ *      201 Created
  *      {
  *          "id": 1,
  *          "firstname": "Admin",
@@ -33,7 +33,7 @@
  * @apiSuccess {Object} user Object containing the user's info
  * @apiError {401} Unauthorized Unauthorized credentials
  * @apiSuccessExample {json} Success Response:
- *      HTTP/1.1 202 Accepted
+ *      202 Accepted
  *      {
  *          "id": 1,
  *          "firstname": "Admin",

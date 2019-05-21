@@ -3,7 +3,7 @@
  * @apiGroup Users
  * @apiSuccess {Array} users List of user objects
  * @apiSuccessExample {Array} Success Response:
- *      HTTP/1.1 200 OK
+ *      200 OK
  *      [
  *          {
  *              "id": 1,
@@ -37,7 +37,7 @@
  * @apiSuccess {Object} user Object containing the user's info
  * @apiError {404} UserNotFound The id of the user was not found
  * @apiSuccessExample {json} Success Response:
- *      HTTP/1.1 200 OK
+ *      200 OK
  *      {
  *          "id": 1,
  *          "firstname": "Admin",
@@ -52,25 +52,25 @@
  */
 
 /**
- * @api {delete} /api/users/delete/:id Delete user
+ * @api {delete} /api/users/:id Delete user
  * @apiGroup Users
  * @apiParam {Number} id The user's id
  * @apiSuccess {Number} id Should return the user's id
  * @apiError {404} UserNotFound The id of the user was not found
  * @apiSuccessExample {json} Success Response:
- *      HTTP/1.1 202 Accepted
+ *      202 Accepted
  *
  *      1
  */
 
 /**
- * @api {patch} /api/users/update/:id Update user
+ * @api {patch} /api/users/:id Update user
  * @apiGroup Users
  * @apiParam {Number} id The user's id
  * @apiSuccess {Object} user Should return the updated user object
  * @apiError {404} UserNotFound The id of the user was not found
  * @apiSuccessExample {json} Success Response:
- *      HTTP/1.1 202 Accepted
+ *      202 Accepted
  *      {
  *          "id": 1,
  *          "firstname": "Admin1",
