@@ -9,12 +9,15 @@ const usersModel = require('../model/usersModel');
 
 // get list of all products
 router.get('/', async (req, res, next) => {
+    let products = [];
+
     try {
         const list = await productsModel.getAll();
 
-        const products = await Promise.all(
-            list.map(async product => await productsModel.getById(product.id))
-        );
+        for (let i = 0; i < list.length; i++) {
+            const product = await productsModel.getById(list[i].id);
+            products.push(product);
+        }
 
         res.status(200).json(products);
     } catch (err) {

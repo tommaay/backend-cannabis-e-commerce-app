@@ -1,0 +1,97 @@
+const express = require('express');
+const router = express.Router();
+
+// productOrderModel contains the functions to get data from the orders table
+const productOrderModel = require('../model/productOrderModel');
+
+// contains the functions from the usersModel
+const usersModel = require('../model/usersModel');
+
+// get list of all product orders
+router.get('/', async (req, res, next) => {
+    try {
+        const orders = await productOrderModel.getAll();
+        res.status(200).json(orders);
+    } catch (err) {
+        next(err);
+    }
+});
+
+// get product order by id
+router.get('/:id', async (req, res, next) => {
+    const id = req.params.id;
+
+    try {
+        const order = await productOrderModel.getById(id);
+
+        order
+            ? res.status(200).json(order)
+            : res
+                  .status(404)
+                  .json({ error: `The order id: ${id} was not found` });
+    } catch (err) {
+        next(err);
+    }
+});
+
+// get list of the product orders by an order id
+router.get('/user/:id', async (req, res, next) => {
+    const userId = req.params.id;
+
+    try {
+        const orders = await productOrderModel.getAllByUserId(userId);
+        res.status(200).json(orders);
+    } catch (err) {
+        next(err);
+    }
+});
+
+// create a new product order
+router.post('/', async (req, res, next) => {
+    const orderInfo = req.body;
+
+    try {
+        const newOrder = await productOrderModel.add(orderInfo);
+
+        res.status(202).json(newOrder);
+    } catch (err) {
+        next(err);
+    }
+});
+
+// delete a product order
+router.delete('/:id', async (req, res, next) => {
+    const id = req.params.id;
+
+    try {
+        const orderId = await productOrderModel.deleteOrder(id);
+
+        orderId
+            ? res.status(202).json(orderId)
+            : res
+                  .status(404)
+                  .json({ error: `There is no order with the id: ${id}` });
+    } catch (err) {
+        next(err);
+    }
+});
+
+// update a product order
+router.patch('/:id', async (req, res, next) => {
+    const id = req.params.id;
+    const updatedInfo = req.body;
+
+    try {
+        const order = await productOrderModel.update(id, updatedInfo);
+
+        order
+            ? res.status(202).json(order)
+            : res
+                  .status(404)
+                  .json({ error: `There is no order with the id: ${id}` });
+    } catch (err) {
+        next(err);
+    }
+});
+
+module.exports = router;
