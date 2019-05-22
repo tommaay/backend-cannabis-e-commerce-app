@@ -5,9 +5,9 @@
  * @apiParam {String} lastname The user's last name
  * @apiParam {String} email Email
  * @apiParam {String} password Password
- * @apiParam {Number} zipcode The user's zipcode
- * @apiParam {Number} phone The user's phone number
- * @apiParam {Number} birthday The user's birthday
+ * @apiParam {Integer} zipcode The user's zipcode
+ * @apiParam {Integer} phone The user's phone number
+ * @apiParam {Integer} birthday The user's birthday
  * @apiParam {Boolean} is_admin Set to True if the user is an admin
  * @apiSuccess {Object} user Object containing the user's info
  * @apiSuccessExample {json} Success Response:

@@ -6,8 +6,8 @@
  * @apiParam {String} image The image url
  * @apiParam {String} thc The amount of THC
  * @apiParam {String} cbd The amount of CBD
- * @apiParam {Number} category The product category
- * @apiParam {Number} type The product type
+ * @apiParam {Integer} category The product category
+ * @apiParam {Integer} type The product type
  * @apiSuccess {Object} product Object containing the product's info
  * @apiSuccessExample {json} Success Response:
  *      201 Created
@@ -78,7 +78,7 @@
 /**
  * @api {get} /api/products/:id Get product by ID
  * @apiGroup Products
- * @apiParam {Number} id The product's id
+ * @apiParam {Integer} id The product's id
  * @apiSuccess {Object} product Object containing the product's info
  * @apiError {404} productNotFound The id of the product was not found
  * @apiSuccessExample {json} Success Response:
@@ -112,8 +112,8 @@
 /**
  * @api {delete} /api/products/:id Delete product
  * @apiGroup Products
- * @apiParam {Number} id The product's id
- * @apiSuccess {Number} id Should return the product's id
+ * @apiParam {Integer} id The product's id
+ * @apiSuccess {Integer} id Should return the product's id
  * @apiError {404} productNotFound The id of the product was not found
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
@@ -124,7 +124,7 @@
 /**
  * @api {patch} /api/products/:id Update product
  * @apiGroup Products
- * @apiParam {Number} id The product's id
+ * @apiParam {Integer} id The product's id
  * @apiSuccess {Object} product Should return the updated product object
  * @apiError {404} productNotFound The id of the product was not found
  * @apiSuccessExample {json} Success Response:

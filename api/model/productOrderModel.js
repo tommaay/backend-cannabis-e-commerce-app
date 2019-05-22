@@ -64,7 +64,7 @@ async function update(id, updatedInfo) {
             .where({ id: id })
             .update(updatedInfo);
 
-        return db('orders')
+        return db('product_orders')
             .where({ id: id })
             .first();
     } else {

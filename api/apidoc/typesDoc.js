@@ -36,7 +36,7 @@
 /**
  * @api {get} /api/types/:id Get type by ID
  * @apiGroup Types
- * @apiParam {Number} id The type's id
+ * @apiParam {Integer} id The type's id
  * @apiSuccess {Object} type Object containing the type's info
  * @apiError {404} typeNotFound The id of the type was not found
  * @apiSuccessExample {json} Success Response:
@@ -51,8 +51,8 @@
 /**
  * @api {delete} /api/types/:id Delete a type
  * @apiGroup Types
- * @apiParam {Number} id The type's id
- * @apiSuccess {Number} id Should return the type's id
+ * @apiParam {Integer} id The type's id
+ * @apiSuccess {Integer} id Should return the type's id
  * @apiError {404} typeNotFound The id of the type was not found
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
@@ -63,7 +63,7 @@
 /**
  * @api {patch} /api/types/:id Update a type
  * @apiGroup Types
- * @apiParam {Number} id The type's id
+ * @apiParam {Integer} id The type's id
  * @apiSuccess {Object} type Should return the updated type object
  * @apiError {404} typeNotFound The id of the type was not found
  * @apiSuccessExample {json} Success Response:

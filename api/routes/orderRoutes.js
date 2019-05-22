@@ -12,7 +12,7 @@ router.post('/', async (req, res, next) => {
     const orderInfo = req.body;
 
     try {
-        const newOrder = await ordersModel.add(orderInfo);
+        const newOrder = await ordersModel.create(orderInfo);
 
         res.status(202).json(newOrder);
     } catch (err) {

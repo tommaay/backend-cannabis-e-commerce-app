@@ -33,7 +33,7 @@
 /**
  * @api {get} /api/users/:id Get user by ID
  * @apiGroup Users
- * @apiParam {Number} id The user's id
+ * @apiParam {Integer} id The user's id
  * @apiSuccess {Object} user Object containing the user's info
  * @apiError {404} UserNotFound The id of the user was not found
  * @apiSuccessExample {json} Success Response:
@@ -54,8 +54,8 @@
 /**
  * @api {delete} /api/users/:id Delete user
  * @apiGroup Users
- * @apiParam {Number} id The user's id
- * @apiSuccess {Number} id Should return the user's id
+ * @apiParam {Integer} id The user's id
+ * @apiSuccess {Integer} id Should return the user's id
  * @apiError {404} UserNotFound The id of the user was not found
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
@@ -66,7 +66,7 @@
 /**
  * @api {patch} /api/users/:id Update user
  * @apiGroup Users
- * @apiParam {Number} id The user's id
+ * @apiParam {Integer} id The user's id
  * @apiSuccess {Object} user Should return the updated user object
  * @apiError {404} UserNotFound The id of the user was not found
  * @apiSuccessExample {json} Success Response:

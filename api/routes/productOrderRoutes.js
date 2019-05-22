@@ -28,19 +28,19 @@ router.get('/:id', async (req, res, next) => {
             ? res.status(200).json(order)
             : res
                   .status(404)
-                  .json({ error: `The order id: ${id} was not found` });
+                  .json({ error: `The product order id: ${id} was not found` });
     } catch (err) {
         next(err);
     }
 });
 
 // get list of the product orders by an order id
-router.get('/user/:id', async (req, res, next) => {
-    const userId = req.params.id;
+router.get('/order/:id', async (req, res, next) => {
+    const orderId = req.params.id;
 
     try {
-        const orders = await productOrderModel.getAllByUserId(userId);
-        res.status(200).json(orders);
+        const productOrders = await productOrderModel.getAllByOrderId(orderId);
+        res.status(200).json(productOrders);
     } catch (err) {
         next(err);
     }
@@ -51,7 +51,7 @@ router.post('/', async (req, res, next) => {
     const orderInfo = req.body;
 
     try {
-        const newOrder = await productOrderModel.add(orderInfo);
+        const newOrder = await productOrderModel.create(orderInfo);
 
         res.status(202).json(newOrder);
     } catch (err) {
@@ -64,13 +64,13 @@ router.delete('/:id', async (req, res, next) => {
     const id = req.params.id;
 
     try {
-        const orderId = await productOrderModel.deleteOrder(id);
+        const orderId = await productOrderModel.deleteProductOrder(id);
 
         orderId
             ? res.status(202).json(orderId)
-            : res
-                  .status(404)
-                  .json({ error: `There is no order with the id: ${id}` });
+            : res.status(404).json({
+                  error: `There is no product order with the id: ${id}`,
+              });
     } catch (err) {
         next(err);
     }
@@ -86,9 +86,9 @@ router.patch('/:id', async (req, res, next) => {
 
         order
             ? res.status(202).json(order)
-            : res
-                  .status(404)
-                  .json({ error: `There is no order with the id: ${id}` });
+            : res.status(404).json({
+                  error: `There is no product order with the id: ${id}`,
+              });
     } catch (err) {
         next(err);
     }

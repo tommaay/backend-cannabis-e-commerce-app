@@ -9,12 +9,9 @@ exports.up = function(knex, Promise) {
             .inTable('users')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
-        table
-            .timestamp('created_at')
-            .defaultTo(knex.fn.now())
-            .notNullable();
+        table.timestamp('created_at').defaultTo(knex.fn.now());
         table.integer('subtotal').notNullable();
-        table.integer('tax').notNullable();
+        table.float('tax').notNullable();
         table.integer('total').notNullable();
     });
 };
