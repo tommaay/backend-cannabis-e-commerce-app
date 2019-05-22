@@ -9,6 +9,7 @@ exports.up = function(knex, Promise) {
             .inTable('users')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
+        table.date('date').notNullable();
         table.integer('subtotal').notNullable();
         table.integer('tax').notNullable();
         table.integer('total').notNullable();

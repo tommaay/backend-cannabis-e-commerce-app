@@ -25,7 +25,7 @@ exports.up = function(knex, Promise) {
             .inTable('prices')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
-        table.integer('number_of_units').notNullable();
+        table.integer('quanity').notNullable();
         table.integer('total').notNullable();
     });
 };

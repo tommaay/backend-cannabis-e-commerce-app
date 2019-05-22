@@ -10,7 +10,7 @@ module.exports = {
 
 // get list of all products
 function getAll() {
-    return db('products');
+    return db('prices');
 }
 
 // get product by id

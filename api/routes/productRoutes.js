@@ -4,7 +4,7 @@ const router = express.Router();
 // productsModel contains the functions to get data from the products table
 const productsModel = require('../model/productsModel');
 
-// usersModel contains the functions to get data from the users table
+// contains the functions from the usersModel
 const usersModel = require('../model/usersModel');
 
 // get list of all products
