@@ -9,6 +9,7 @@ const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
 const typeRoutes = require('./routes/typeRoutes');
+const pricesRoutes = require('./routes/pricesRoutes');
 
 // sanity check
 server.get('/', (req, res) => {
@@ -20,6 +21,7 @@ server.use('/api/users', userRoutes);
 server.use('/api/products', productRoutes);
 server.use('/api/categories', categoryRoutes);
 server.use('/api/types', typeRoutes);
+server.use('/api/prices', pricesRoutes);
 
 // default error handler
 server.use(errorHandler);
