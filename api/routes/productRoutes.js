@@ -64,7 +64,7 @@ router.delete('/:id', async (req, res, next) => {
 });
 
 // update a product
-router.patch('/update/:id', async (req, res, next) => {
+router.patch('/:id', async (req, res, next) => {
     const id = req.params.id;
     const updatedInfo = req.body;
 

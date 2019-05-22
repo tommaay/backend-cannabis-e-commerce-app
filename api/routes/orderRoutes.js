@@ -12,9 +12,9 @@ router.post('/', async (req, res, next) => {
     const orderInfo = req.body;
 
     try {
-        const orderId = await ordersModel.add(orderInfo);
+        const newOrder = await ordersModel.add(orderInfo);
 
-        res.status(202).json(orderId);
+        res.status(202).json(newOrder);
     } catch (err) {
         next(err);
     }
@@ -38,7 +38,7 @@ router.delete('/:id', async (req, res, next) => {
 });
 
 // update a order
-router.patch('/update/:id', async (req, res, next) => {
+router.patch('/:id', async (req, res, next) => {
     const id = req.params.id;
     const updatedInfo = req.body;
 

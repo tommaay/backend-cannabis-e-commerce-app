@@ -14,7 +14,9 @@ async function create(orderDetails) {
     const order = await db('orders').insert(orderDetails);
     const id = order[0];
 
-    return id;
+    return db('orders')
+        .where({ id: id })
+        .first();
 }
 
 // delete an order
