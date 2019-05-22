@@ -3,6 +3,7 @@ const db = require('../../data/dbConfig');
 module.exports = {
     getAll,
     getById,
+    getByProductId,
     add,
     deletePrice,
     update,
@@ -18,6 +19,11 @@ function getById(id) {
     return db('prices')
         .where({ id: id })
         .first();
+}
+
+// get prices by product_id
+function getByProductId(id) {
+    return db('prices').where({ product_id: id });
 }
 
 // add a new price

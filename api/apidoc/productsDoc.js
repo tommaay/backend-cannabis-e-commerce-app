@@ -38,7 +38,21 @@
  *              "thc": "15%",
  *              "cbd": "5%",
  *              "category": 1,
- *              "type": 3
+ *              "type": 3,
+ *              "prices": [
+ *                  {
+ *                      "id": 4,
+ *                      "product_id": 4,
+ *                      "size": "1/8th",
+ *                      "price": 1100
+ *                  },
+ *                  {
+ *                      "id": 5,
+ *                      "product_id": 4,
+ *                      "size": "Ouncce",
+ *                      "price": 6300
+ *                  }
+ *              ]
  *          },
  *          {
  *              "id": 2,
@@ -48,7 +62,15 @@
  *              "thc": "15%",
  *              "cbd": "5%",
  *              "category": 2,
- *              "type": 1
+ *              "type": 1,
+ *              "prices": [
+ *                  {
+ *                      "id": 6,
+ *                      "product_id": 4,
+ *                      "size": "Ouncce",
+ *                      "price": 6300
+ *                  }
+ *              ]
  *          },
  *      ]
  */
@@ -69,7 +91,21 @@
  *          "thc": "15%",
  *          "cbd": "5%",
  *          "category": 1,
- *          "type": 3
+ *          "type": 3,
+ *              "prices": [
+ *                  {
+ *                      "id": 4,
+ *                      "product_id": 4,
+ *                      "size": "1/8th",
+ *                      "price": 1100
+ *                  },
+ *                  {
+ *                      "id": 5,
+ *                      "product_id": 4,
+ *                      "size": "Ouncce",
+ *                      "price": 6300
+ *                  }
+ *              ]
  *      }
  */
 

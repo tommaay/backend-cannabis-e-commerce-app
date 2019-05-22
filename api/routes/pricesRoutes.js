@@ -34,6 +34,23 @@ router.get('/:id', async (req, res, next) => {
     }
 });
 
+// get prices by product_id
+router.get('/product/:id', async (req, res, next) => {
+    const id = req.params.id;
+
+    try {
+        const price = await pricesModel.getByProductId(id);
+
+        price
+            ? res.status(200).json(price)
+            : res
+                  .status(404)
+                  .json({ message: `The price id: ${id} was not found` });
+    } catch (err) {
+        next(err);
+    }
+});
+
 // add a new price
 router.post('/', async (req, res, next) => {
     const input = req.body;

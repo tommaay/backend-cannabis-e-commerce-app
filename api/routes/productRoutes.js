@@ -10,7 +10,12 @@ const usersModel = require('../model/usersModel');
 // get list of all products
 router.get('/', async (req, res, next) => {
     try {
-        const products = await productsModel.getAll();
+        const list = await productsModel.getAll();
+
+        const products = await Promise.all(
+            list.map(async product => await productsModel.getById(product.id))
+        );
+
         res.status(200).json(products);
     } catch (err) {
         next(err);

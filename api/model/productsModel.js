@@ -10,14 +10,20 @@ module.exports = {
 
 // get list of all products
 function getAll() {
-    return db('products');
+    return db('products').select('id');
 }
 
 // get product by id
-function getById(id) {
-    return db('products')
+async function getById(id) {
+    const product = await db('products')
         .where({ id: id })
         .first();
+
+    const prices = await db('prices').where({ product_id: id });
+
+    product.prices = prices;
+
+    return product;
 }
 
 // add a new product
