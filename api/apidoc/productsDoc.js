@@ -92,20 +92,20 @@
  *          "cbd": "5%",
  *          "category": 1,
  *          "type": 3,
- *              "prices": [
- *                  {
- *                      "id": 4,
- *                      "product_id": 4,
- *                      "size": "1/8th",
- *                      "price": 1100
- *                  },
- *                  {
- *                      "id": 5,
- *                      "product_id": 4,
- *                      "size": "Ouncce",
- *                      "price": 6300
- *                  }
- *              ]
+ *          "prices": [
+ *              {
+ *                  "id": 4,
+ *                  "product_id": 4,
+ *                  "size": "1/8th",
+ *                  "price": 1100
+ *              },
+ *              {
+ *                  "id": 5,
+ *                  "product_id": 4,
+ *                  "size": "Ouncce",
+ *                  "price": 6300
+ *              }
+ *          ]
  *      }
  */
 
