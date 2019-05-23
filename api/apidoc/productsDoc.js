@@ -1,5 +1,5 @@
 /**
- * @api {post} /api/products Add a new product
+ * @api {post} https://flower-co.herokuapp.com/api/products Add a new product
  * @apiGroup Products
  * @apiParam {String} name Product name
  * @apiParam {String} description The description of the product
@@ -24,7 +24,7 @@
  */
 
 /**
- * @api {get} /api/products Get list of all products
+ * @api {get} https://flower-co.herokuapp.com/api/products Get list of all products
  * @apiGroup Products
  * @apiSuccess {Array} products List of product objects
  * @apiSuccessExample {Array} Success Response:
@@ -79,7 +79,7 @@
  */
 
 /**
- * @api {get} /api/products/:id Get product by ID
+ * @api {get} https://flower-co.herokuapp.com/api/products/:id Get product by ID
  * @apiGroup Products
  * @apiParam {Integer} id The product's id
  * @apiSuccess {Object} product Object containing the product's info
@@ -115,7 +115,7 @@
  */
 
 /**
- * @api {delete} /api/products/:id Delete product
+ * @api {delete} https://flower-co.herokuapp.com/api/products/:id Delete product
  * @apiGroup Products
  * @apiParam {Integer} id The product's id
  * @apiSuccess {Integer} id Should return the product's id
@@ -127,7 +127,7 @@
  */
 
 /**
- * @api {patch} /api/products/:id Update product
+ * @api {patch} https://flower-co.herokuapp.com/api/products/:id Update product
  * @apiGroup Products
  * @apiParam {Integer} id The product's id
  * @apiSuccess {Object} product Should return the updated product object

@@ -1,5 +1,5 @@
 /**
- * @api {post} /api/specs Create a new spec for a product
+ * @api {post} https://flower-co.herokuapp.com/api/specs Create a new spec for a product
  * @apiGroup Product Specs
  * @apiParam {Integer} product_id The product id is a foreign key from the products table
  * @apiParam {String} size The size of each unit
@@ -18,7 +18,7 @@
  */
 
 /**
- * @api {get} /api/specs Get list of all specs
+ * @api {get} https://flower-co.herokuapp.com/api/specs Get list of all specs
  * @apiGroup Product Specs
  * @apiSuccess {Array} specs List of spec objects
  * @apiSuccessExample {Array} Success Response:
@@ -42,7 +42,7 @@
  */
 
 /**
- * @api {get} /api/specs/:id Get a spec by ID
+ * @api {get} https://flower-co.herokuapp.com/api/specs/:id Get a spec by ID
  * @apiGroup Product Specs
  * @apiParam {Integer} id The spec's id
  * @apiSuccess {Object} spec Object containing the spec's info
@@ -59,7 +59,7 @@
  */
 
 /**
- * @api {get} /api/specs/product/:id Get list of all specs by by product ID
+ * @api {get} https://flower-co.herokuapp.com/api/specs/product/:id Get list of all specs by by product ID
  * @apiGroup Product Specs
  * @apiParam {Integer} id The product id
  * @apiSuccess {Array} specs Array containing a list of specs of the product
@@ -85,7 +85,7 @@
  */
 
 /**
- * @api {delete} /api/specs/:id Delete a spec
+ * @api {delete} https://flower-co.herokuapp.com/api/specs/:id Delete a spec
  * @apiGroup Product Specs
  * @apiParam {Integer} id The spec's id
  * @apiSuccess {Integer} id Should return the spec's id
@@ -97,7 +97,7 @@
  */
 
 /**
- * @api {patch} /api/specs/:id Update a spec
+ * @api {patch} https://flower-co.herokuapp.com/api/specs/:id Update a spec
  * @apiGroup Product Specs
  * @apiParam {Integer} id The spec's id
  * @apiSuccess {Object} spec Should return the updated spec object

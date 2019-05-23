@@ -1,5 +1,5 @@
 /**
- * @api {post} /api/product-orders Create a new product-order
+ * @api {post} https://flower-co.herokuapp.com/api/product-orders Create a new product-order
  * @apiGroup Product-Orders
  * @apiParam {Integer} product_id The product id is a foreign key from the products table
  * @apiParam {Integer} price_id The price is a foreign key from the prices table
@@ -20,7 +20,7 @@
  */
 
 /**
- * @api {get} /api/product-orders Get list of all product-orders
+ * @api {get} https://flower-co.herokuapp.com/api/product-orders Get list of all product-orders
  * @apiGroup Product-Orders
  * @apiSuccess {Array} orders List of product-order objects
  * @apiSuccessExample {Array} Success Response:
@@ -46,7 +46,7 @@
  */
 
 /**
- * @api {get} /api/product-orders/:id Get a product-order by ID
+ * @api {get} https://flower-co.herokuapp.com/api/product-orders/:id Get a product-order by ID
  * @apiGroup Product-Orders
  * @apiParam {Integer} id The order's id
  * @apiSuccess {Object} order Object containing the order's info
@@ -64,7 +64,7 @@
  */
 
 /**
- * @api {get} /api/product-orders/order/:id Get list of all product-orders by by Order ID
+ * @api {get} https://flower-co.herokuapp.com/api/product-orders/order/:id Get list of all product-orders by by Order ID
  * @apiGroup Product-Orders
  * @apiParam {Integer} id The order id
  * @apiSuccess {Array} orders Array containing a list of orders
@@ -92,7 +92,7 @@
  */
 
 /**
- * @api {delete} /api/product-orders/:id Delete a product-order
+ * @api {delete} https://flower-co.herokuapp.com/api/product-orders/:id Delete a product-order
  * @apiGroup Product-Orders
  * @apiParam {Integer} id The product-order's id
  * @apiSuccess {Integer} id Should return the order's id
@@ -104,7 +104,7 @@
  */
 
 /**
- * @api {patch} /api/product-orders/:id Update a product-order
+ * @api {patch} https://flower-co.herokuapp.com/api/product-orders/:id Update a product-order
  * @apiGroup Product-Orders
  * @apiParam {Integer} id The product-order's id
  * @apiSuccess {Object} order Should return the updated order object

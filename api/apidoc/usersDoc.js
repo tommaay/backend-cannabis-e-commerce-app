@@ -1,5 +1,5 @@
 /**
- * @api {get} /api/users Get list of all users
+ * @api {get} https://flower-co.herokuapp.com/api/users Get list of all users
  * @apiGroup Users
  * @apiSuccess {Array} users List of user objects
  * @apiSuccessExample {Array} Success Response:
@@ -31,7 +31,7 @@
  */
 
 /**
- * @api {get} /api/users/:id Get user by ID
+ * @api {get} https://flower-co.herokuapp.com/api/users/:id Get user by ID
  * @apiGroup Users
  * @apiParam {Integer} id The user's id
  * @apiSuccess {Object} user Object containing the user's info
@@ -52,7 +52,7 @@
  */
 
 /**
- * @api {delete} /api/users/:id Delete user
+ * @api {delete} https://flower-co.herokuapp.com/api/users/:id Delete user
  * @apiGroup Users
  * @apiParam {Integer} id The user's id
  * @apiSuccess {Integer} id Should return the user's id
@@ -64,7 +64,7 @@
  */
 
 /**
- * @api {patch} /api/users/:id Update user
+ * @api {patch} https://flower-co.herokuapp.com/api/users/:id Update user
  * @apiGroup Users
  * @apiParam {Integer} id The user's id
  * @apiSuccess {Object} user Should return the updated user object

@@ -1,5 +1,5 @@
 /**
- * @api {post} /api/orders Create a new order
+ * @api {post} https://flower-co.herokuapp.com/api/orders Create a new order
  * @apiGroup Orders
  * @apiParam {Integer} user_id The user id is a foreign key from the users table
  * @apiParam {Integer} subtotal The total before tax
@@ -19,7 +19,7 @@
  */
 
 /**
- * @api {get} /api/orders Get list of all orders
+ * @api {get} https://flower-co.herokuapp.com/api/orders Get list of all orders
  * @apiGroup Orders
  * @apiSuccess {Array} orders List of order objects
  * @apiSuccessExample {Array} Success Response:
@@ -45,7 +45,7 @@
  */
 
 /**
- * @api {get} /api/orders/:id Get order by ID
+ * @api {get} https://flower-co.herokuapp.com/api/orders/:id Get order by ID
  * @apiGroup Orders
  * @apiParam {Integer} id The order's id
  * @apiSuccess {Object} order Object containing the order's info
@@ -63,7 +63,7 @@
  */
 
 /**
- * @api {get} /api/orders/user/:id Get list of all orders by by User ID
+ * @api {get} https://flower-co.herokuapp.com/api/orders/user/:id Get list of all orders by by User ID
  * @apiGroup Orders
  * @apiParam {Integer} id The user's id
  * @apiSuccess {Array} orders Array containing a list of orders
@@ -99,7 +99,7 @@
  */
 
 /**
- * @api {delete} /api/orders/:id Delete an order
+ * @api {delete} https://flower-co.herokuapp.com/api/orders/:id Delete an order
  * @apiGroup Orders
  * @apiParam {Integer} id The order's id
  * @apiSuccess {Integer} id Should return the order's id
@@ -111,7 +111,7 @@
  */
 
 /**
- * @api {patch} /api/orders/:id Update order
+ * @api {patch} https://flower-co.herokuapp.com/api/orders/:id Update order
  * @apiGroup Orders
  * @apiParam {Integer} id The order's id
  * @apiSuccess {Object} order Should return the updated order object

@@ -1,5 +1,5 @@
 /**
- * @api {post} /api/types Add a new type
+ * @api {post} https://flower-co.herokuapp.com/api/types Add a new type
  * @apiGroup Types
  * @apiParam {String} name Type name
  * @apiParam {String} [description] The description of the type
@@ -14,7 +14,7 @@
  */
 
 /**
- * @api {get} /api/types Get list of all types
+ * @api {get} https://flower-co.herokuapp.com/api/types Get list of all types
  * @apiGroup Types
  * @apiSuccess {Array} types List of type objects
  * @apiSuccessExample {Array} Success Response:
@@ -34,7 +34,7 @@
  */
 
 /**
- * @api {get} /api/types/:id Get type by ID
+ * @api {get} https://flower-co.herokuapp.com/api/types/:id Get type by ID
  * @apiGroup Types
  * @apiParam {Integer} id The type's id
  * @apiSuccess {Object} type Object containing the type's info
@@ -49,7 +49,7 @@
  */
 
 /**
- * @api {delete} /api/types/:id Delete a type
+ * @api {delete} https://flower-co.herokuapp.com/api/types/:id Delete a type
  * @apiGroup Types
  * @apiParam {Integer} id The type's id
  * @apiSuccess {Integer} id Should return the type's id
@@ -61,7 +61,7 @@
  */
 
 /**
- * @api {patch} /api/types/:id Update a type
+ * @api {patch} https://flower-co.herokuapp.com/api/types/:id Update a type
  * @apiGroup Types
  * @apiParam {Integer} id The type's id
  * @apiSuccess {Object} type Should return the updated type object

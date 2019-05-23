@@ -1,5 +1,5 @@
 /**
- * @api {post} /api/categories Add a new category
+ * @api {post} https://flower-co.herokuapp.com/api/categories Add a new category
  * @apiGroup Categories
  * @apiParam {String} name Category name
  * @apiParam {String} [description] The description of the category
@@ -14,7 +14,7 @@
  */
 
 /**
- * @api {get} /api/categories Get list of all categories
+ * @api {get} https://flower-co.herokuapp.com/api/categories Get list of all categories
  * @apiGroup Categories
  * @apiSuccess {Array} categories List of category objects
  * @apiSuccessExample {Array} Success Response:
@@ -34,7 +34,7 @@
  */
 
 /**
- * @api {get} /api/categories/:id Get category by ID
+ * @api {get} https://flower-co.herokuapp.com/api/categories/:id Get category by ID
  * @apiGroup Categories
  * @apiParam {Integer} id The category's id
  * @apiSuccess {Object} category Object containing the category's info
@@ -49,7 +49,7 @@
  */
 
 /**
- * @api {delete} /api/categories/:id Delete a category
+ * @api {delete} https://flower-co.herokuapp.com/api/categories/:id Delete a category
  * @apiGroup Categories
  * @apiParam {Integer} id The category's id
  * @apiSuccess {Integer} id Should return the category's id
@@ -61,7 +61,7 @@
  */
 
 /**
- * @api {patch} /api/categories/:id Update a category
+ * @api {patch} https://flower-co.herokuapp.com/api/categories/:id Update a category
  * @apiGroup Categories
  * @apiParam {Integer} id The category's id
  * @apiSuccess {Object} category Should return the updated category object
