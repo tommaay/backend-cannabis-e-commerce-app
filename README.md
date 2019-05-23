@@ -6,7 +6,7 @@ This is the backend for a cannabis e-commerce platform. Users will be able to si
 
 https://cannabis-e-commerce-apidocs.netlify.com/
 
-## Features - Admin
+## Features - Admins
 
 - Add new products
 - Update existing products
@@ -15,7 +15,7 @@ https://cannabis-e-commerce-apidocs.netlify.com/
 - Upload images for products
 - Accept payments through Stripe
 
-## Features - Admin
+## Features - Customers
 
 - Sign up for an account
 - Browse the catelog of products
