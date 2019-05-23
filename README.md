@@ -11,6 +11,7 @@ https://cannabis-e-commerce-apidocs.netlify.com/
 - Add new products
 - Update existing products
 - Delete existing products
+- Add and update inventory
 - Add new users for admin roles
 - Upload images for products
 - Accept payments through Stripe
