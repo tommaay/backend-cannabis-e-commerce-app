@@ -1,97 +1,97 @@
 const express = require('express');
 const router = express.Router();
 
-// pricesModel contains the functions to get data from the prices table
-const pricesModel = require('../model/pricesModel');
+// specsModel contains the functions to get data from the specs table
+const specsModel = require('../model/specsModel');
 
 // contains the functions from the usersModel
 const usersModel = require('../model/usersModel');
 
-// get list of all prices
+// get list of all specs
 router.get('/', async (req, res, next) => {
     try {
-        const prices = await pricesModel.getAll();
-        res.status(200).json(prices);
+        const specs = await specsModel.getAll();
+        res.status(200).json(specs);
     } catch (err) {
         next(err);
     }
 });
 
-// get price by id
+// get spec by id
 router.get('/:id', async (req, res, next) => {
     const id = req.params.id;
 
     try {
-        const price = await pricesModel.getById(id);
+        const spec = await specsModel.getById(id);
 
-        price
-            ? res.status(200).json(price)
+        spec
+            ? res.status(200).json(spec)
             : res
                   .status(404)
-                  .json({ message: `The price id: ${id} was not found` });
+                  .json({ message: `The spec id: ${id} was not found` });
     } catch (err) {
         next(err);
     }
 });
 
-// get prices by product_id
+// get specs by product_id
 router.get('/product/:id', async (req, res, next) => {
     const id = req.params.id;
 
     try {
-        const price = await pricesModel.getByProductId(id);
+        const spec = await specsModel.getByProductId(id);
 
-        price
-            ? res.status(200).json(price)
+        spec
+            ? res.status(200).json(spec)
             : res
                   .status(404)
-                  .json({ message: `The price id: ${id} was not found` });
+                  .json({ message: `The spec id: ${id} was not found` });
     } catch (err) {
         next(err);
     }
 });
 
-// add a new price
+// add a new spec
 router.post('/', async (req, res, next) => {
     const input = req.body;
 
     try {
-        const newprice = await pricesModel.add(input);
-        res.status(202).json(newprice);
+        const newspec = await specsModel.add(input);
+        res.status(202).json(newspec);
     } catch (err) {
         next(err);
     }
 });
 
-// delete a price
+// delete a spec
 router.delete('/:id', async (req, res, next) => {
     const id = req.params.id;
 
     try {
-        const priceId = await pricesModel.deletePrice(id);
-        priceId
-            ? res.status(202).json(priceId)
+        const specId = await specsModel.deleteSpec(id);
+        specId
+            ? res.status(202).json(specId)
             : res
                   .status(404)
-                  .json({ message: `The price id: ${id} was not found` });
+                  .json({ message: `The spec id: ${id} was not found` });
     } catch (err) {
         next(err);
     }
 });
 
-// update a price
+// update a spec
 router.patch('/:id', async (req, res, next) => {
     const id = req.params.id;
     const updatedInfo = req.body;
 
     try {
-        const price = await pricesModel.update(id, updatedInfo);
+        const spec = await specsModel.update(id, updatedInfo);
 
-        price
-            ? res.status(202).json(price)
+        spec
+            ? res.status(202).json(spec)
             : res
                   .status(404)
-                  .json({ error: `There is no price with the id: ${id}` });
+                  .json({ error: `There is no spec with the id: ${id}` });
     } catch (err) {
         next(err);
     }

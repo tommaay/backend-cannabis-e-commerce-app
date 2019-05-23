@@ -18,11 +18,11 @@ exports.up = function(knex, Promise) {
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
         table
-            .integer('price_id')
+            .integer('spec_id')
             .unsigned()
             .notNullable()
             .references('id')
-            .inTable('prices')
+            .inTable('specs')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
         table.integer('quantity').notNullable();

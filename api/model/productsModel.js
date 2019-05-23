@@ -19,9 +19,9 @@ async function getById(id) {
         .where({ id: id })
         .first();
 
-    const prices = await db('prices').where({ product_id: id });
+    const specs = await db('specs').where({ product_id: id });
 
-    product.prices = prices;
+    product.specs = specs;
 
     return product;
 }

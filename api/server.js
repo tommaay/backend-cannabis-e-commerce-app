@@ -9,7 +9,7 @@ const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
 const typeRoutes = require('./routes/typeRoutes');
-const pricesRoutes = require('./routes/pricesRoutes');
+const specRoutes = require('./routes/specRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const productOrderRoutes = require('./routes/productOrderRoutes');
 
@@ -23,7 +23,7 @@ server.use('/api/users', userRoutes);
 server.use('/api/products', productRoutes);
 server.use('/api/categories', categoryRoutes);
 server.use('/api/types', typeRoutes);
-server.use('/api/prices', pricesRoutes);
+server.use('/api/specs', specRoutes);
 server.use('/api/orders', orderRoutes);
 server.use('/api/product-orders', productOrderRoutes);
 
