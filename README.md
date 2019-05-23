@@ -6,6 +6,10 @@ This is the backend for a cannabis e-commerce platform. Users will be able to si
 
 https://cannabis-e-commerce-apidocs.netlify.com/
 
+## Deployed on Heroku
+
+https://flower-co.herokuapp.com
+
 ## Features - Admins
 
 - Add new products
