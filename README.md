@@ -1,10 +1,10 @@
 # Backend-Cannabis-E-Commerce-App
-# CliqueBook
 
-I am building out the backend for a Cannabis e-commerce platform. Users will be able to sign up and browse the catelog of products and purchase them with their credit cards through Stripe payments. The admins will be able to add, update and delete products as needed. 
+This is the backend for a cannabis e-commerce platform. Users will be able to sign up and browse the catelog of products and purchase them with their credit cards through Stripe payments. The admins will be able to add, update and delete products as needed. 
 
-- Back-End Documentation: https://cannabis-e-commerce-apidocs.netlify.com/
-<br>
+## Back-End Documentation 
+
+https://cannabis-e-commerce-apidocs.netlify.com/
 
 ## Features - Admin
 
@@ -14,7 +14,6 @@ I am building out the backend for a Cannabis e-commerce platform. Users will be 
 - Add new users for admin roles
 - Upload images for products
 - Accept payments through Stripe
-<br>
 
 ## Features - Admin
 
@@ -22,7 +21,6 @@ I am building out the backend for a Cannabis e-commerce platform. Users will be 
 - Browse the catelog of products
 - Add products to their shopping cart
 - Checkout using a credit card through Stripe
-<br>
 
 ## Dependencies
 
