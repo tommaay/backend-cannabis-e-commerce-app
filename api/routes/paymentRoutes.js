@@ -2,28 +2,24 @@ const express = require('express');
 const router = express.Router();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-router.get('/', (req, res, next) => {
-    res.status(202).send(process.env.STRIPE_PUBLISHABLE_KEY);
-});
-
 router.post('/charge', async (req, res, next) => {
-    const { amount } = req.body;
+    const { name, amount, quantity, stripeEmail, stripeToken, id } = req.body;
 
-    const session = await stripe.checkout.sessions.create({
-        payment_method_types: ['card'],
-        line_items: [
-            {
-                name: 'T-shirt',
-                description: 'Comfortable cotton t-shirt',
-                images: ['https://example.com/t-shirt.png'],
-                amount: 500,
-                currency: 'usd',
-                quantity: 1,
-            },
-        ],
-        success_url: 'https://example.com/success',
-        cancel_url: 'https://example.com/cancel',
+    const info = await stripe.customers.create({
+        email: stripeEmail,
+        source: stripeToken,
     });
+
+    const charge = await stripe.charges.create({
+        amount,
+        currency: 'usd',
+        description: 'Purchase from Flower Co.',
+        source: token,
+    });
+
+    let record = await db('orders').insert(record);
+
+    res.status(201).json(record);
 });
 
 module.exports = router;
