@@ -46,7 +46,7 @@
  * @apiGroup Product Specs
  * @apiParam {Integer} id The spec's id
  * @apiSuccess {Object} spec Object containing the spec's info
- * @apiError {404} specNotFound The id of the spec was not found
+ * @apiError {404} specNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      200 OK
  *          {
@@ -63,7 +63,7 @@
  * @apiGroup Product Specs
  * @apiParam {Integer} id The product id
  * @apiSuccess {Array} specs Array containing a list of specs of the product
- * @apiError {404} productNotFound The id of the product was not found
+ * @apiError {404} productNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      200 OK
  *          [
@@ -89,7 +89,7 @@
  * @apiGroup Product Specs
  * @apiParam {Integer} id The spec's id
  * @apiSuccess {Integer} id Should return the spec's id
- * @apiError {404} specNotFound The id of the spec was not found
+ * @apiError {404} specNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *
@@ -101,7 +101,7 @@
  * @apiGroup Product Specs
  * @apiParam {Integer} id The spec's id
  * @apiSuccess {Object} spec Should return the updated spec object
- * @apiError {404} specNotFound The id of the spec was not found
+ * @apiError {404} specNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *          {

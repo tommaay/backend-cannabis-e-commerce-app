@@ -12,6 +12,7 @@ const typeRoutes = require('./routes/typeRoutes');
 const specRoutes = require('./routes/specRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const productOrderRoutes = require('./routes/productOrderRoutes');
+const paymentRoutes = require('./routes/paymentRoutes');
 
 // sanity check
 server.get('/', (req, res) => {
@@ -26,6 +27,7 @@ server.use('/api/types', typeRoutes);
 server.use('/api/specs', specRoutes);
 server.use('/api/orders', orderRoutes);
 server.use('/api/product-orders', productOrderRoutes);
+server.use('/api/payments', paymentRoutes);
 
 // default error handler
 server.use(errorHandler);

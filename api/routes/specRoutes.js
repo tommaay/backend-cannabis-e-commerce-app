@@ -24,11 +24,7 @@ router.get('/:id', async (req, res, next) => {
     try {
         const spec = await specsModel.getById(id);
 
-        spec
-            ? res.status(200).json(spec)
-            : res
-                  .status(404)
-                  .json({ message: `The spec id: ${id} was not found` });
+        spec ? res.status(200).json(spec) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -41,11 +37,7 @@ router.get('/product/:id', async (req, res, next) => {
     try {
         const spec = await specsModel.getByProductId(id);
 
-        spec
-            ? res.status(200).json(spec)
-            : res
-                  .status(404)
-                  .json({ message: `The spec id: ${id} was not found` });
+        spec ? res.status(200).json(spec) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -69,11 +61,7 @@ router.delete('/:id', async (req, res, next) => {
 
     try {
         const specId = await specsModel.deleteSpec(id);
-        specId
-            ? res.status(202).json(specId)
-            : res
-                  .status(404)
-                  .json({ message: `The spec id: ${id} was not found` });
+        specId ? res.status(202).json(specId) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -87,11 +75,7 @@ router.patch('/:id', async (req, res, next) => {
     try {
         const spec = await specsModel.update(id, updatedInfo);
 
-        spec
-            ? res.status(202).json(spec)
-            : res
-                  .status(404)
-                  .json({ error: `There is no spec with the id: ${id}` });
+        spec ? res.status(202).json(spec) : next({ status: 404 });
     } catch (err) {
         next(err);
     }

@@ -83,7 +83,7 @@
  * @apiGroup Products
  * @apiParam {Integer} id The product's id
  * @apiSuccess {Object} product Object containing the product's info
- * @apiError {404} productNotFound The id of the product was not found
+ * @apiError {404} productNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      200 OK
  *      {
@@ -119,7 +119,7 @@
  * @apiGroup Products
  * @apiParam {Integer} id The product's id
  * @apiSuccess {Integer} id Should return the product's id
- * @apiError {404} productNotFound The id of the product was not found
+ * @apiError {404} productNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *
@@ -131,7 +131,7 @@
  * @apiGroup Products
  * @apiParam {Integer} id The product's id
  * @apiSuccess {Object} product Should return the updated product object
- * @apiError {404} productNotFound The id of the product was not found
+ * @apiError {404} productNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *      {

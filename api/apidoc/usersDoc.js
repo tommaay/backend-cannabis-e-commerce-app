@@ -35,7 +35,7 @@
  * @apiGroup Users
  * @apiParam {Integer} id The user's id
  * @apiSuccess {Object} user Object containing the user's info
- * @apiError {404} UserNotFound The id of the user was not found
+ * @apiError {404} UserNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      200 OK
  *      {
@@ -56,7 +56,7 @@
  * @apiGroup Users
  * @apiParam {Integer} id The user's id
  * @apiSuccess {Integer} id Should return the user's id
- * @apiError {404} UserNotFound The id of the user was not found
+ * @apiError {404} UserNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *
@@ -68,7 +68,7 @@
  * @apiGroup Users
  * @apiParam {Integer} id The user's id
  * @apiSuccess {Object} user Should return the updated user object
- * @apiError {404} UserNotFound The id of the user was not found
+ * @apiError {404} UserNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *      {

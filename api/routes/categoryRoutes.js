@@ -24,11 +24,7 @@ router.get('/:id', async (req, res, next) => {
     try {
         const category = await categoriesModel.getById(id);
 
-        category
-            ? res.status(200).json(category)
-            : res
-                  .status(404)
-                  .json({ message: `The category id: ${id} was not found` });
+        category ? res.status(200).json(category) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -52,11 +48,7 @@ router.delete('/:id', async (req, res, next) => {
 
     try {
         const categoryId = await categoriesModel.deleteCategory(id);
-        categoryId
-            ? res.status(202).json(categoryId)
-            : res
-                  .status(404)
-                  .json({ message: `The category id: ${id} was not found` });
+        categoryId ? res.status(202).json(categoryId) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -70,11 +62,7 @@ router.patch('/:id', async (req, res, next) => {
     try {
         const category = await categoriesModel.update(id, updatedInfo);
 
-        category
-            ? res.status(202).json(category)
-            : res
-                  .status(404)
-                  .json({ error: `There is no category with the id: ${id}` });
+        category ? res.status(202).json(category) : next({ status: 404 });
     } catch (err) {
         next(err);
     }

@@ -35,7 +35,7 @@ router.post('/login', async (req, res, next) => {
 
             res.status(202).json({ user: user[0], token: token });
         } else {
-            res.status(401).json({ error: 'Unauthorized credentials' });
+            next({ status: 401 });
         }
     } catch (err) {
         next(err);
@@ -58,11 +58,7 @@ router.get('/:id', async (req, res, next) => {
 
     try {
         const user = await usersModel.getById(id);
-        user
-            ? res.status(200).json(user)
-            : res
-                  .status(404)
-                  .json({ error: `The user id: ${id} was not found` });
+        user ? res.status(200).json(user) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -75,11 +71,7 @@ router.delete('/:id', async (req, res, next) => {
     try {
         const userId = await usersModel.deleteUser(id);
 
-        userId
-            ? res.status(202).json(userId)
-            : res
-                  .status(404)
-                  .json({ error: `There is no user with the id: ${id}` });
+        userId ? res.status(202).json(userId) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -93,11 +85,7 @@ router.patch('/:id', async (req, res, next) => {
     try {
         const user = await usersModel.update(id, updatedInfo);
 
-        user
-            ? res.status(202).json(user)
-            : res
-                  .status(404)
-                  .json({ error: `There is no user with the id: ${id}` });
+        user ? res.status(202).json(user) : next({ status: 404 });
     } catch (err) {
         next(err);
     }

@@ -38,7 +38,7 @@
  * @apiGroup Categories
  * @apiParam {Integer} id The category's id
  * @apiSuccess {Object} category Object containing the category's info
- * @apiError {404} categoryNotFound The id of the category was not found
+ * @apiError {404} categoryNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      200 OK
  *      {
@@ -53,7 +53,7 @@
  * @apiGroup Categories
  * @apiParam {Integer} id The category's id
  * @apiSuccess {Integer} id Should return the category's id
- * @apiError {404} categoryNotFound The id of the category was not found
+ * @apiError {404} categoryNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *
@@ -65,7 +65,7 @@
  * @apiGroup Categories
  * @apiParam {Integer} id The category's id
  * @apiSuccess {Object} category Should return the updated category object
- * @apiError {404} categoryNotFound The id of the category was not found
+ * @apiError {404} categoryNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *      {

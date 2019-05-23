@@ -31,7 +31,7 @@
  * @apiParam {String} email Email
  * @apiParam {String} password Password
  * @apiSuccess {Object} user Object containing the user's info
- * @apiError {401} Unauthorized Unauthorized credentials
+ * @apiError {401} Unauthorized You are unathorized to view the content
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *      {

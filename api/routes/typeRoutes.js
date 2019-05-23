@@ -24,11 +24,7 @@ router.get('/:id', async (req, res, next) => {
     try {
         const type = await typesModel.getById(id);
 
-        type
-            ? res.status(200).json(type)
-            : res
-                  .status(404)
-                  .json({ message: `The type id: ${id} was not found` });
+        type ? res.status(200).json(type) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -52,11 +48,7 @@ router.delete('/:id', async (req, res, next) => {
 
     try {
         const typeId = await typesModel.deleteType(id);
-        typeId
-            ? res.status(202).json(typeId)
-            : res
-                  .status(404)
-                  .json({ message: `The type id: ${id} was not found` });
+        typeId ? res.status(202).json(typeId) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -70,11 +62,7 @@ router.patch('/:id', async (req, res, next) => {
     try {
         const type = await typesModel.update(id, updatedInfo);
 
-        type
-            ? res.status(202).json(type)
-            : res
-                  .status(404)
-                  .json({ error: `There is no type with the id: ${id}` });
+        type ? res.status(202).json(type) : next({ status: 404 });
     } catch (err) {
         next(err);
     }

@@ -38,7 +38,7 @@
  * @apiGroup Types
  * @apiParam {Integer} id The type's id
  * @apiSuccess {Object} type Object containing the type's info
- * @apiError {404} typeNotFound The id of the type was not found
+ * @apiError {404} typeNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      200 OK
  *      {
@@ -53,7 +53,7 @@
  * @apiGroup Types
  * @apiParam {Integer} id The type's id
  * @apiSuccess {Integer} id Should return the type's id
- * @apiError {404} typeNotFound The id of the type was not found
+ * @apiError {404} typeNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *
@@ -65,7 +65,7 @@
  * @apiGroup Types
  * @apiParam {Integer} id The type's id
  * @apiSuccess {Object} type Should return the updated type object
- * @apiError {404} typeNotFound The id of the type was not found
+ * @apiError {404} typeNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *      {

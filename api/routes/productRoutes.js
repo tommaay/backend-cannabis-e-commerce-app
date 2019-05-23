@@ -39,11 +39,7 @@ router.get('/:id', async (req, res, next) => {
 
     try {
         const product = await productsModel.getById(id);
-        product
-            ? res.status(200).json(product)
-            : res
-                  .status(404)
-                  .json({ error: `The product id: ${id} was not found` });
+        product ? res.status(200).json(product) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -69,11 +65,7 @@ router.delete('/:id', async (req, res, next) => {
     try {
         const productId = await productsModel.deleteproduct(id);
 
-        productId
-            ? res.status(202).json(productId)
-            : res
-                  .status(404)
-                  .json({ error: `There is no product with the id: ${id}` });
+        productId ? res.status(202).json(productId) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -87,11 +79,7 @@ router.patch('/:id', async (req, res, next) => {
     try {
         const product = await productsModel.update(id, updatedInfo);
 
-        product
-            ? res.status(202).json(product)
-            : res
-                  .status(404)
-                  .json({ error: `There is no product with the id: ${id}` });
+        product ? res.status(202).json(product) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -108,13 +96,7 @@ router.post('/upload', multerUploads, (req, res) => {
             return res
                 .status(200)
                 .json(image)
-                .catch(err =>
-                    res.status(400).json({
-                        message:
-                            'Something went wrong while processing your request',
-                        err: err,
-                    })
-                );
+                .catch(err => next({ status: 400 }));
         });
     }
 });

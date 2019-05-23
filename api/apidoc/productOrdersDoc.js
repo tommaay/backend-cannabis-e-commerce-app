@@ -50,7 +50,7 @@
  * @apiGroup Product-Orders
  * @apiParam {Integer} id The order's id
  * @apiSuccess {Object} order Object containing the order's info
- * @apiError {404} orderNotFound The id of the order was not found
+ * @apiError {404} orderNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      200 OK
  *          {
@@ -68,7 +68,7 @@
  * @apiGroup Product-Orders
  * @apiParam {Integer} id The order id
  * @apiSuccess {Array} orders Array containing a list of orders
- * @apiError {404} userNotFound The id of the user was not found
+ * @apiError {404} userNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      200 OK
  *          [
@@ -96,7 +96,7 @@
  * @apiGroup Product-Orders
  * @apiParam {Integer} id The product-order's id
  * @apiSuccess {Integer} id Should return the order's id
- * @apiError {404} orderNotFound The id of the order was not found
+ * @apiError {404} orderNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *
@@ -108,7 +108,7 @@
  * @apiGroup Product-Orders
  * @apiParam {Integer} id The product-order's id
  * @apiSuccess {Object} order Should return the updated order object
- * @apiError {404} orderNotFound The id of the order was not found
+ * @apiError {404} orderNotFound The requested content does not exist
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *          {

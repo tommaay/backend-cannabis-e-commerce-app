@@ -27,11 +27,7 @@ router.delete('/:id', async (req, res, next) => {
     try {
         const orderId = await ordersModel.deleteOrder(id);
 
-        orderId
-            ? res.status(202).json(orderId)
-            : res
-                  .status(404)
-                  .json({ error: `There is no order with the id: ${id}` });
+        orderId ? res.status(202).json(orderId) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -45,11 +41,7 @@ router.patch('/:id', async (req, res, next) => {
     try {
         const order = await ordersModel.update(id, updatedInfo);
 
-        order
-            ? res.status(202).json(order)
-            : res
-                  .status(404)
-                  .json({ error: `There is no order with the id: ${id}` });
+        order ? res.status(202).json(order) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
@@ -72,11 +64,7 @@ router.get('/:id', async (req, res, next) => {
     try {
         const order = await ordersModel.getById(id);
 
-        order
-            ? res.status(200).json(order)
-            : res
-                  .status(404)
-                  .json({ error: `The order id: ${id} was not found` });
+        order ? res.status(200).json(order) : next({ status: 404 });
     } catch (err) {
         next(err);
     }
