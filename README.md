@@ -8,7 +8,7 @@ https://cannabis-e-commerce-apidocs.netlify.com/
 
 ## Data Schema
 
-![Data Schema](https://raw.githubusercontent.com/tommaay/backend-cannabis-e-commerce-app/blob/master/public/images/data-structure.png)
+![Data Schema](https://raw.githubusercontent.com/tommaay/backend-cannabis-e-commerce-app/master/public/images/data-structure.png)
 
 ## Deployed on Heroku
 
