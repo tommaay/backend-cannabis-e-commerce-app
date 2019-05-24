@@ -2,11 +2,12 @@
 
 This is the backend for a cannabis e-commerce platform. Users will be able to sign up and browse the catelog of products and purchase them with their credit cards through Stripe payments. The admins will be able to add, update and delete products as needed. 
 
-## Instructions
+## Instructions to clone the repo and run the server locally
 
 - Clone the repo
-- run npm install or yarn 
-- run yarn server
+- Run npm install or yarn 
+- Run or npm server or yarn server
+- The server should run locally on port 5000
 
 ## Back-End Documentation 
 
