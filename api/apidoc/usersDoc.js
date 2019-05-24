@@ -12,7 +12,7 @@
  *              "email": "admin@test.com",
  *              "password": "$2a$11$geHxdA7OyRMRQ.NHhAEWXe0ydQkF4RTLuILVcZhKpgDL0U4WxMqZW",
  *              "zipcode": 95123,
- *              "phone": 5552227777,
+ *              "phone": "555-222-7777",
  *              "birthday": 511171200000,
  *              "is_admin": 1
  *          },
@@ -23,7 +23,7 @@
  *              "email": "customer@test.com",
  *              "password": "$2a$11$geHxdA7OyRMRQ.NHhAEWXe0ydQkF4RTLuILVcZhKpgDL0U4WxMqZW",
  *              "zipcode": 95133,
- *              "phone": 2225557777,
+ *              "phone": "222-555-7777",
  *              "birthday": 651481200000,
  *              "is_admin": 0
  *          }
@@ -45,7 +45,7 @@
  *          "email": "admin@test.com",
  *          "password": "$2a$11$geHxdA7OyRMRQ.NHhAEWXe0ydQkF4RTLuILVcZhKpgDL0U4WxMqZW",
  *          "zipcode": 95123,
- *          "phone": 5552227777,
+ *          "phone": "555-222-7777",
  *          "birthday": 511171200000,
  *          "is_admin": 1
  *      }
@@ -78,7 +78,7 @@
  *          "email": "admin@test.com",
  *          "password": "$2a$11$geHxdA7OyRMRQ.NHhAEWXe0ydQkF4RTLuILVcZhKpgDL0U4WxMqZW",
  *          "zipcode": 95123,
- *          "phone": 5552227777,
+ *          "phone": "555-222-7777",
  *          "birthday": 511171200000,
  *          "is_admin": 1
  *      }

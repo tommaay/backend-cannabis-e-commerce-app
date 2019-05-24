@@ -10,7 +10,7 @@ exports.up = function(knex, Promise) {
             .notNullable()
             .unsigned();
         table
-            .integer('phone')
+            .string('phone')
             .notNullable()
             .unsigned();
         table.date('birthday').notNullable();
