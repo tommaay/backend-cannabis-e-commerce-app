@@ -13,9 +13,6 @@ exports.up = function(knex, Promise) {
         table.integer('subtotal').notNullable();
         table.float('tax').notNullable();
         table.integer('total').notNullable();
-        knex.raw('SET foreign_key_checks = 0');
-        knex.truncate();
-        knex.raw('SET foreign_key_checks = 1');
     });
 };
 

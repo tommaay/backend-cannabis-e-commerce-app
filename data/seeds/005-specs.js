@@ -184,7 +184,7 @@ for (let i = 1; i <= 140; i++) {
 exports.seed = function(knex, Promise) {
     // Deletes ALL existing entries
     return knex('specs')
-        .truncate()
+        .del()
         .then(function() {
             // Inserts seed entries
             return knex('specs').insert(specs);

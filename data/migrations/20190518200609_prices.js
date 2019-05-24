@@ -12,9 +12,6 @@ exports.up = function(knex, Promise) {
         table.string('size').notNullable();
         table.integer('price').notNullable();
         table.integer('inventory').notNullable();
-        knex.raw('SET foreign_key_checks = 0');
-        knex.truncate();
-        knex.raw('SET foreign_key_checks = 1');
     });
 };
 

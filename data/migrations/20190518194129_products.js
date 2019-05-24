@@ -22,9 +22,6 @@ exports.up = function(knex, Promise) {
             .inTable('types')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
-        knex.raw('SET foreign_key_checks = 0');
-        knex.truncate();
-        knex.raw('SET foreign_key_checks = 1');
     });
 };
 

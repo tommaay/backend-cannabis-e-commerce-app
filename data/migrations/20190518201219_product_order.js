@@ -27,9 +27,6 @@ exports.up = function(knex, Promise) {
             .onUpdate('CASCADE');
         table.integer('quantity').notNullable();
         table.integer('total').notNullable();
-        knex.raw('SET foreign_key_checks = 0');
-        knex.truncate();
-        knex.raw('SET foreign_key_checks = 1');
     });
 };
 
