@@ -2,14 +2,12 @@
  * @api {post} https://flower-co.herokuapp.com/api/types Add a new type
  * @apiGroup Types
  * @apiParam {String} name Type name
- * @apiParam {String} [description] The description of the type
  * @apiSuccess {Object} type Object containing the type's info
  * @apiSuccessExample {json} Success Response:
  *      201 Created
  *      {
  *          "id": 1,
  *          "name": "Hybrid",
- *          "description": null,
  *      }
  */
 
@@ -23,12 +21,10 @@
  *          {
  *              "id": 1,
  *              "name": "Hybrid",
- *              "description": null
  *          },
  *          {
  *              "id": 2,
  *              "name": "Sativa",
- *              "description": null
  *          }
  *      ]
  */
@@ -44,7 +40,6 @@
  *      {
  *          "id": 1,
  *          "name": "Hybrid",
- *          "description": null,
  *      }
  */
 
@@ -71,6 +66,5 @@
  *      {
  *          "id": 1,
  *          "name": "Hybrid",
- *          "description": null,
  *      }
  */
