@@ -2,6 +2,12 @@
 
 This is the backend for a cannabis e-commerce platform. Users will be able to sign up and browse the catelog of products and purchase them with their credit cards through Stripe payments. The admins will be able to add, update and delete products as needed. 
 
+## Instructions
+
+- Clone the repo
+- run npm install or yarn 
+- run yarn server
+
 ## Back-End Documentation 
 
 https://cannabis-e-commerce-apidocs.netlify.com/
