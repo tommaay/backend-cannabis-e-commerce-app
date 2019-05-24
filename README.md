@@ -6,6 +6,10 @@ This is the backend for a cannabis e-commerce platform. Users will be able to si
 
 https://cannabis-e-commerce-apidocs.netlify.com/
 
+## Data Schema
+
+![Data Schema](https://raw.githubusercontent.com/tommaay/backend-cannabis-e-commerce-app/blob/master/public/images/data-structure.png)
+
 ## Deployed on Heroku
 
 https://flower-co.herokuapp.com
