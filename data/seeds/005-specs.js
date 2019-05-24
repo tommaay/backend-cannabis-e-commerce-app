@@ -44,7 +44,7 @@ for (let i = 1; i <= 140; i++) {
                 },
                 {
                     product_id: i,
-                    size: `Ouncce`,
+                    size: `Ounce`,
                     price: 6300,
                     inventory: 60,
                 },
