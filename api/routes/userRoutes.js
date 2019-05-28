@@ -14,9 +14,8 @@ router.post('/register', async (req, res, next) => {
 
     try {
         const registeredUser = await usersModel.register(userInfo);
-        const token = await usersModel.generateToken(registeredUser);
 
-        res.status(201).json({ id: registeredUser[0], token });
+        res.status(201).json(registeredUser[0]);
     } catch (err) {
         next(err);
     }
