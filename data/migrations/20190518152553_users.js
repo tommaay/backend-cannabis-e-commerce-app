@@ -13,7 +13,7 @@ exports.up = function(knex, Promise) {
             .string('phone')
             .notNullable()
             .unsigned();
-        table.date('birthday').notNullable();
+        table.string('birthday').notNullable();
         table.boolean('is_admin').notNullable();
         table.unique('email');
     });
