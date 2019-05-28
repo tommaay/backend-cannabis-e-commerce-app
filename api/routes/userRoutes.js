@@ -33,7 +33,7 @@ router.post('/login', async (req, res, next) => {
         if (user && bcrypt.compareSync(loginCreds.password, user.password)) {
             const token = await usersModel.generateToken(user);
 
-            res.status(202).json({ user: user[0], token: token });
+            res.status(202).json({ user: user, token: token });
         } else {
             next({ status: 401 });
         }

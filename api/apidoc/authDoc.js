@@ -13,15 +13,18 @@
  * @apiSuccessExample {json} Success Response:
  *      201 Created
  *      {
- *          "id": 1,
- *          "firstname": "Admin",
- *          "lastname": "One",
- *          "email": "admin@test.com",
- *          "password": "$2a$11$geHxdA7OyRMRQ.NHhAEWXe0ydQkF4RTLuILVcZhKpgDL0U4WxMqZW",
- *          "zipcode": 95123,
- *          "phone": 5552227777,
- *          "birthday": 511171200000,
- *          "is_admin": 1
+ *          "user": {
+ *              "id": 2,
+ *              "firstname": "Customer",
+ *              "lastname": "One",
+ *              "email": "customer@test.com",
+ *              "password": "$2a$11$4Mu6wGoQUUJAKs4b/wmBi.4rDpn1QyGI20U7.3jbHVTHbQ2gGItaW",
+ *              "zipcode": 95133,
+ *              "phone": "222-555-7777",
+ *              "birthday": 651481200000,
+ *              "is_admin": 0
+ *          },
+ *          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOiJDdXN0b21lciIsImxhc3RuYW1lIjoiT25lIiwiZW1haWwiOiJjdXN0b21lckB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiJDJhJDExJDRNdTZ3R29RVVVKQUtzNGIvd21CaS40ckRwbjFReUdJMjBVNy4zamJIVlRIYlEyZ0dJdGFXIiwiemlwY29kZSI6OTUxMzMsInBob25lIjoiMjIyLTU1NS03Nzc3IiwiYmlydGhkYXkiOjY1MTQ4MTIwMDAwMCwiaXNfYWRtaW4iOjAsImlhdCI6MTU1OTA3MDczNiwiZXhwIjoxNTU5MDc0MzM2fQ.eB0v4bCKpvnE1YU44ujPTThRSpzhsXRgQzLXD_9MkpE"
  *      }
  */
 
@@ -35,14 +38,17 @@
  * @apiSuccessExample {json} Success Response:
  *      202 Accepted
  *      {
- *          "id": 1,
- *          "firstname": "Admin",
- *          "lastname": "One",
- *          "email": "admin@test.com",
- *          "password": "$2a$11$geHxdA7OyRMRQ.NHhAEWXe0ydQkF4RTLuILVcZhKpgDL0U4WxMqZW",
- *          "zipcode": 95123,
- *          "phone": 5552227777,
- *          "birthday": 511171200000,
- *          "is_admin": 1
+ *          "user": {
+ *              "id": 2,
+ *              "firstname": "Customer",
+ *              "lastname": "One",
+ *              "email": "customer@test.com",
+ *              "password": "$2a$11$4Mu6wGoQUUJAKs4b/wmBi.4rDpn1QyGI20U7.3jbHVTHbQ2gGItaW",
+ *              "zipcode": 95133,
+ *              "phone": "222-555-7777",
+ *              "birthday": 651481200000,
+ *              "is_admin": 0
+ *          },
+ *          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOiJDdXN0b21lciIsImxhc3RuYW1lIjoiT25lIiwiZW1haWwiOiJjdXN0b21lckB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiJDJhJDExJDRNdTZ3R29RVVVKQUtzNGIvd21CaS40ckRwbjFReUdJMjBVNy4zamJIVlRIYlEyZ0dJdGFXIiwiemlwY29kZSI6OTUxMzMsInBob25lIjoiMjIyLTU1NS03Nzc3IiwiYmlydGhkYXkiOjY1MTQ4MTIwMDAwMCwiaXNfYWRtaW4iOjAsImlhdCI6MTU1OTA3MDczNiwiZXhwIjoxNTU5MDc0MzM2fQ.eB0v4bCKpvnE1YU44ujPTThRSpzhsXRgQzLXD_9MkpE"
  *      }
  */
