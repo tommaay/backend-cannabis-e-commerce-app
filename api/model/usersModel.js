@@ -18,7 +18,7 @@ async function register(userInfo) {
     const user = await db('users').insert(userInfo);
     const id = parseInt(user[0]);
 
-    return await db('users')
+    return db('users')
         .where({ id: id })
         .first();
 
