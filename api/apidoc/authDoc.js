@@ -5,9 +5,9 @@
  * @apiParam {String} lastname The user's last name
  * @apiParam {String} email Email
  * @apiParam {String} password Password
- * @apiParam {Integer} zipcode The user's zipcode
- * @apiParam {Integer} phone The user's phone number
- * @apiParam {Integer} birthday The user's birthday
+ * @apiParam {String} zipcode The user's zipcode
+ * @apiParam {String} phone The user's phone number
+ * @apiParam {Date} birthday The user's birthday
  * @apiParam {Boolean} is_admin Set to True if the user is an admin
  * @apiSuccess {Object} user Object containing the user's info
  * @apiSuccessExample {json} Success Response:
@@ -19,7 +19,7 @@
  *              "lastname": "One",
  *              "email": "customer@test.com",
  *              "password": "$2a$11$4Mu6wGoQUUJAKs4b/wmBi.4rDpn1QyGI20U7.3jbHVTHbQ2gGItaW",
- *              "zipcode": 95133,
+ *              "zipcode": "95133",
  *              "phone": "222-555-7777",
  *              "birthday": 651481200000,
  *              "is_admin": 0
@@ -44,7 +44,7 @@
  *              "lastname": "One",
  *              "email": "customer@test.com",
  *              "password": "$2a$11$4Mu6wGoQUUJAKs4b/wmBi.4rDpn1QyGI20U7.3jbHVTHbQ2gGItaW",
- *              "zipcode": 95133,
+ *              "zipcode": "95133",
  *              "phone": "222-555-7777",
  *              "birthday": 651481200000,
  *              "is_admin": 0

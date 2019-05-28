@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
         table.string('email').notNullable();
         table.string('password').notNullable();
         table
-            .integer('zipcode')
+            .string('zipcode')
             .notNullable()
             .unsigned();
         table
