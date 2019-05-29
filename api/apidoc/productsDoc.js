@@ -29,52 +29,45 @@
  * @apiSuccess {Array} products List of product objects
  * @apiSuccessExample {Array} Success Response:
  *      200 OK
- *      [
- *          {
- *              "id": 1,
- *              "name": "Kiva Chocolate Bar-0",
- *              "description": "Meet KIVA: California’s premier cannabis-infused confectioner. With a variety of flavors and forms, KIVA delivers a carefully curated edible experience with every bite – every time. The KIVA Vanilla Chai Chocolate Bar is no exception – sprinkled with chai spice and hints of vanilla bean, this dreamy dessert is sure to elevate your tastebuds and your mind. Ingredients: Semisweet Chocolate (Sugar, Unsweetened Chocolate, Cocoa Butter, Potassium Carbonate, Lecithin (Sunflower and/or Soya), Vanilla), Cannabis Extract. Allergy Warning: May Contain Traces of Nuts and Milk.",
- *              "image": "https://flowercompany.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbE1kIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7989ee32cb1ca2f2de8cd1caee8855dba65fc118/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTWpRd2VESTBNRDRHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--06afb311380d7cc3fcc597107955bd30149b6764/vanilla%20kiva.png",
- *              "thc": "15%",
- *              "cbd": "5%",
- *              "category": 1,
- *              "type": 3,
- *              "specs": [
- *                  {
- *                      "id": 4,
- *                      "product_id": 4,
- *                      "size": "1/8th",
- *                      "price": 1100,
- *                      "inventory": 100
- *                  },
- *                  {
- *                      "id": 5,
- *                      "product_id": 4,
- *                      "size": "Ouncce",
- *                      "price": 6300,
- *                      "inventory": 100
- *                  }
- *              ]
- *          },
- *          {
- *              "id": 2,
- *              "name": "Boss OG Pre-Ground-0",
- *              "description": "Boss OG is a fragrant OG Kush pheno with similar qualities to Fire OG. This strain has OG aromas of lemon, lime, and fuel, and offers consumers happy, relaxing effects.",
- *              "image": "https://flowercompany.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaW9mIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e0d42ff6385b473929de6ad07106fb15cd78d725/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTmpBd2VEWXdNRDRHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--23feaba46ad0db49d6ebdab3718f32d89781e821/preground.png",
- *              "thc": "15%",
- *              "cbd": "5%",
- *              "category": 2,
- *              "type": 1,
- *              "specs": [
- *                  {
- *                      "id": 6,
- *                      "product_id": 4,
- *                      "size": "Ouncce",
- *                      "price": 6300,
- *                      "inventory": 100
- *                  }
- *              ]
- *          },
+ *       [
+ *           {
+ *               "id": 1,
+ *               "name": "Kiva Chocolate Bar-0",
+ *               "description": "Meet KIVA: California’s premier cannabis-infused confectioner. With a variety of flavors and forms, KIVA delivers a carefully curated edible experience with every bite – every time. The KIVA Vanilla Chai Chocolate Bar is no exception – sprinkled with chai spice and hints of vanilla bean, this dreamy dessert is sure to elevate your tastebuds and your mind. Ingredients: Semisweet Chocolate (Sugar, Unsweetened Chocolate, Cocoa Butter, Potassium Carbonate, Lecithin (Sunflower and/or Soya), Vanilla), Cannabis Extract. Allergy Warning: May Contain Traces of Nuts and Milk.",
+ *               "image": "https://flowercompany.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbE1kIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7989ee32cb1ca2f2de8cd1caee8855dba65fc118/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTWpRd2VESTBNRDRHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--06afb311380d7cc3fcc597107955bd30149b6764/vanilla%20kiva.png",
+ *               "thc": "15%",
+ *               "cbd": "5%",
+ *               "category": "Edibles",
+ *               "type": "Indica",
+ *               "specs": [
+ *                   {
+ *                       "id": 1,
+ *                       "product_id": 1,
+ *                       "size": "1 bar",
+ *                       "price": 1200,
+ *                       "inventory": 100
+ *                   }
+ *               ]
+ *           },
+ *           {
+ *               "id": 2,
+ *               "name": "Boss OG Pre-Ground-0",
+ *               "description": "Boss OG is a fragrant OG Kush pheno with similar qualities to Fire OG. This strain has OG aromas of lemon, lime, and fuel, and offers consumers happy, relaxing effects.",
+ *               "image": "https://flowercompany.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaW9mIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e0d42ff6385b473929de6ad07106fb15cd78d725/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTmpBd2VEWXdNRDRHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--23feaba46ad0db49d6ebdab3718f32d89781e821/preground.png",
+ *               "thc": "15%",
+ *               "cbd": "5%",
+ *               "category": "Ready to Roll",
+ *               "type": "Hybrid",
+ *               "specs": [
+ *                   {
+ *                       "id": 2,
+ *                       "product_id": 2,
+ *                       "size": "Half Oz",
+ *                       "price": 2000,
+ *                       "inventory": 100
+ *                   }
+ *               ]
+ *           }
  *      ]
  */
 
@@ -87,27 +80,20 @@
  * @apiSuccessExample {json} Success Response:
  *      200 OK
  *      {
- *          "id": 1,
- *          "name": "Kiva Chocolate Bar-0",
- *          "description": "Meet KIVA: California’s premier cannabis-infused confectioner. With a variety of flavors and forms, KIVA delivers a carefully curated edible experience with every bite – every time. The KIVA Vanilla Chai Chocolate Bar is no exception – sprinkled with chai spice and hints of vanilla bean, this dreamy dessert is sure to elevate your tastebuds and your mind. Ingredients: Semisweet Chocolate (Sugar, Unsweetened Chocolate, Cocoa Butter, Potassium Carbonate, Lecithin (Sunflower and/or Soya), Vanilla), Cannabis Extract. Allergy Warning: May Contain Traces of Nuts and Milk.",
- *          "image": "https://flowercompany.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbE1kIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7989ee32cb1ca2f2de8cd1caee8855dba65fc118/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTWpRd2VESTBNRDRHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--06afb311380d7cc3fcc597107955bd30149b6764/vanilla%20kiva.png",
+ *          "id": 2,
+ *          "name": "Boss OG Pre-Ground-0",
+ *          "description": "Boss OG is a fragrant OG Kush pheno with similar qualities to Fire OG. This strain has OG aromas of lemon, lime, and fuel, and offers consumers happy, relaxing effects.",
+ *          "image": "https://flowercompany.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaW9mIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e0d42ff6385b473929de6ad07106fb15cd78d725/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTmpBd2VEWXdNRDRHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--23feaba46ad0db49d6ebdab3718f32d89781e821/preground.png",
  *          "thc": "15%",
  *          "cbd": "5%",
- *          "category": 1,
- *          "type": 3,
+ *          "category": "Ready to Roll",
+ *          "type": "Hybrid",
  *          "specs": [
  *              {
- *                  "id": 4,
- *                  "product_id": 4,
- *                  "size": "1/8th",
- *                  "price": 1100,
- *                  "inventory": 100
- *              },
- *              {
- *                  "id": 5,
- *                  "product_id": 4,
- *                  "size": "Ouncce",
- *                  "price": 6300,
+ *                  "id": 2,
+ *                  "product_id": 2,
+ *                  "size": "Half Oz",
+ *                  "price": 2000,
  *                  "inventory": 100
  *              }
  *          ]

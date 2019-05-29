@@ -20,8 +20,18 @@ async function getById(id) {
         .first();
 
     const specs = await db('specs').where({ product_id: id });
+    const category = await db('categories')
+        .where({ id: product.category })
+        .select('name')
+        .first();
+    const type = await db('types')
+        .where({ id: product.type })
+        .select('name')
+        .first();
 
     product.specs = specs;
+    product.category = category.name;
+    product.type = type.name;
 
     return product;
 }
