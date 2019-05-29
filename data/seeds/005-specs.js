@@ -1,6 +1,6 @@
 let specs = [];
 for (let i = 1; i <= 140; i++) {
-    switch (i % 13) {
+    switch (i % 14) {
         case 1:
             specs = specs.concat([
                 {
