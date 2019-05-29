@@ -15,12 +15,10 @@ module.exports = {
 
 // register a new user
 async function register(userInfo) {
-    const user = await db('users')
-        .returning('id')
-        .insert(userInfo);
-    const id = parseInt(user[0]);
+    const user = await db('users').insert(userInfo, 'id');
+    const id = parseInt(user);
 
-    console.log(user);
+    console.log('user', user);
 
     return db('users')
         .where({ id: id })
