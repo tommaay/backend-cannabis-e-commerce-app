@@ -15,7 +15,16 @@ module.exports = {
 
 // register a new user
 async function register(userInfo) {
-    return db('users').insert(userInfo);
+    const user = await db('users')
+        .returning('id')
+        .insert(userInfo);
+    const id = parseInt(user[0]);
+
+    console.log(user);
+
+    return db('users')
+        .where({ id: id })
+        .first();
 }
 
 // user login
