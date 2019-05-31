@@ -37,8 +37,15 @@
  *               "image": "https://flowercompany.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbE1kIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7989ee32cb1ca2f2de8cd1caee8855dba65fc118/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTWpRd2VESTBNRDRHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--06afb311380d7cc3fcc597107955bd30149b6764/vanilla%20kiva.png",
  *               "thc": "15%",
  *               "cbd": "5%",
- *               "category": "Edibles",
- *               "type": "Indica",
+ *               "category": {
+ *                   "id": 1,
+ *                   "name": "Edibles",
+ *                   "description": "Our edibles are the easiest way to dose efficiently and consistently. With these, any day can be a relaxed and trusted experience. Before you realize, you'll be hungry for more."
+ *               },
+ *               "type": {
+ *                   "id": 3,
+ *                   "name": "Indica"
+ *               },
  *               "specs": [
  *                   {
  *                       "id": 1,
@@ -56,8 +63,15 @@
  *               "image": "https://flowercompany.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaW9mIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e0d42ff6385b473929de6ad07106fb15cd78d725/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTmpBd2VEWXdNRDRHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--23feaba46ad0db49d6ebdab3718f32d89781e821/preground.png",
  *               "thc": "15%",
  *               "cbd": "5%",
- *               "category": "Ready to Roll",
- *               "type": "Hybrid",
+ *               "category": {
+ *                   "id": 2,
+ *                   "name": "Ready to Roll",
+ *                   "description": "Our Ready to Roll flower is all you need to roll one up at a moment's notice. These half ounces of pre-ground quality cannabis are convenient, potent, and priced to make any day a cheap vacation."
+ *               },
+ *               "type": {
+ *                   "id": 1,
+ *                   "name": "Hybrid"
+ *               },
  *               "specs": [
  *                   {
  *                       "id": 2,
@@ -86,8 +100,15 @@
  *          "image": "https://flowercompany.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaW9mIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e0d42ff6385b473929de6ad07106fb15cd78d725/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTmpBd2VEWXdNRDRHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--23feaba46ad0db49d6ebdab3718f32d89781e821/preground.png",
  *          "thc": "15%",
  *          "cbd": "5%",
- *          "category": "Ready to Roll",
- *          "type": "Hybrid",
+ *          "category": {
+ *              "id": 2,
+ *              "name": "Ready to Roll",
+ *              "description": "Our Ready to Roll flower is all you need to roll one up at a moment's notice. These half ounces of pre-ground quality cannabis are convenient, potent, and priced to make any day a cheap vacation."
+ *          },
+ *          "type": {
+ *              "id": 1,
+ *              "name": "Hybrid"
+ *          },
  *          "specs": [
  *              {
  *                  "id": 2,
@@ -127,7 +148,14 @@
  *          "image": "https://flowercompany.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbE1kIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7989ee32cb1ca2f2de8cd1caee8855dba65fc118/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTWpRd2VESTBNRDRHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--06afb311380d7cc3fcc597107955bd30149b6764/vanilla%20kiva.png",
  *          "thc": "15%",
  *          "cbd": "5%",
- *          "category": 1,
- *          "type": 3
+ *          "category": {
+ *              "id": 1,
+ *              "name": "Edibles",
+ *              "description": "Our edibles are the easiest way to dose efficiently and consistently. With these, any day can be a relaxed and trusted experience. Before you realize, you'll be hungry for more."
+ *          },
+ *          "type": {
+ *              "id": 3,
+ *              "name": "Indica"
+ *          }
  *      }
  */
