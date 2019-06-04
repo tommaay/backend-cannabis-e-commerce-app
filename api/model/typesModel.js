@@ -22,8 +22,8 @@ function getById(id) {
 
 // add a new type
 async function add(newType) {
-    const type = await db('types').insert(newType);
-    const id = type[0];
+    const type = await db('types').insert(newType, 'id');
+    const id = parseInt(type);
 
     return db('types')
         .where({ id: id })

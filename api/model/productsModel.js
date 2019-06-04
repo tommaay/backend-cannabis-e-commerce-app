@@ -36,8 +36,8 @@ async function getById(id) {
 
 // add a new product
 async function add(newProductInfo) {
-    const product = await db('products').insert(newProductInfo);
-    const id = product[0];
+    const product = await db('products').insert(newProductInfo, 'id');
+    const id = parseInt(product);
 
     return db('products')
         .where({ id: id })

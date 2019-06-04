@@ -28,8 +28,9 @@ function getAllByOrderId(id) {
 
 // create a new product order
 async function create(orderDetails) {
-    const order = await db('product_orders').insert(orderDetails);
-    const id = order[0];
+    // Insert new product order and returns an id
+    const order = await db('product_orders').insert(orderDetails, 'id');
+    const id = parseInt(order);
 
     return db('orders')
         .where({ id: id })

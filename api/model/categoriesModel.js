@@ -22,8 +22,8 @@ function getById(id) {
 
 // add a new category
 async function add(newCategory) {
-    const category = await db('categories').insert(newCategory);
-    const id = category[0];
+    const category = await db('categories').insert(newCategory, 'id');
+    const id = parseInt(category);
 
     return db('categories')
         .where({ id: id })

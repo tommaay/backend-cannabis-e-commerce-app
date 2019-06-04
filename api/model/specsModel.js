@@ -28,8 +28,8 @@ function getByProductId(id) {
 
 // add a new spec
 async function add(newspec) {
-    const spec = await db('specs').insert(newspec);
-    const id = spec[0];
+    const spec = await db('specs').insert(newspec, 'id');
+    const id = parseInt(spec);
 
     return db('specs')
         .where({ id: id })
