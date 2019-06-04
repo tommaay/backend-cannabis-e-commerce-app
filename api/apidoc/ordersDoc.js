@@ -13,9 +13,10 @@
  *              "user_id": 2,
  *              "created_at": "2019-05-22 20:56:20",
  *              "subtotal": 3600,
- *              "tax": 0.3,
+ *              "tax": 1380,
+ *              "taxRate": 0.3,
  *              "delivery": 1000,
- *              "total": 4680
+ *              "total": 5980
  *          }
  */
 
@@ -31,18 +32,20 @@
  *                  "user_id": 2,
  *                  "created_at": "2019-05-22 20:56:20",
  *                  "subtotal": 3600,
- *                  "tax": 0.3,
+ *                  "tax": 1380,
+ *                  "taxRate": 0.3,
  *                  "delivery": 1000,
- *                  "total": 4680
+ *                  "total": 5980
  *              },
  *              {
  *                  "id": 2,
  *                  "user_id": 1,
  *                  "created_at": "2019-05-22 20:56:20",
  *                  "subtotal": 6000,
- *                  "tax": 0.3,
+ *                  "tax": 2100,
+ *                  "taxRate": 0.3,
  *                  "delivery": 1000,
- *                  "total": 7800
+ *                  "total": 9100
  *              },
  *          ]
  */
@@ -60,9 +63,10 @@
  *              "user_id": 2,
  *              "created_at": "2019-05-22 20:56:20",
  *              "subtotal": 3600,
- *              "tax": 0.3,
+ *              "tax": 1380,
+ *              "taxRate": 0.3,
  *              "delivery": 1000,
- *              "total": 4680
+ *              "total": 5980
  *          }
  */
 
@@ -80,27 +84,30 @@
  *                  "user_id": 2,
  *                  "created_at": "2019-05-22 20:56:20",
  *                  "subtotal": 3600,
- *                  "tax": 0.3,
+ *                  "tax": 1380,
+ *                  "taxRate": 0.3,
  *                  "delivery": 1000,
- *                  "total": 4680
+ *                  "total": 5980
  *              },
  *              {
  *                  "id": 4,
  *                  "user_id": 2,
  *                  "created_at": "2019-05-22 20:56:20",
  *                  "subtotal": 2000,
- *                  "tax": 0.3,
+ *                  "tax": 900,
+ *                  "taxRate": 0.3,
  *                  "delivery": 1000,
- *                  "total": 2600
+ *                  "total": 3900
  *              },
  *              {
  *                  "id": 6,
  *                  "user_id": 2,
  *                  "created_at": "2019-05-22 20:56:20",
  *                  "subtotal": 3200,
- *                  "tax": 0.3,
+ *                  "tax": 1260,
+ *                  "taxRate": 0.3,
  *                  "delivery": 1000,
- *                  "total": 4160
+ *                  "total": 5460
  *              }
  *          ]
  */
@@ -130,8 +137,9 @@
  *              "user_id": 2,
  *              "created_at": "2019-05-22 20:56:20",
  *              "subtotal": 3600,
- *              "tax": 0.3,
+ *              "tax": 1380,
+ *              "taxRate": 0.3,
  *              "delivery": 1000,
- *              "total": 4680
+ *              "total": 5980
  *          }
  */
