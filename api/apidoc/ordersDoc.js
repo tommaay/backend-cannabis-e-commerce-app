@@ -14,7 +14,7 @@
  *              "created_at": "2019-05-22 20:56:20",
  *              "subtotal": 3600,
  *              "tax": 1380,
- *              "taxRate": 0.3,
+ *              "tax_rate": 0.3,
  *              "delivery": 1000,
  *              "total": 5980
  *          }
@@ -33,7 +33,7 @@
  *                  "created_at": "2019-05-22 20:56:20",
  *                  "subtotal": 3600,
  *                  "tax": 1380,
- *                  "taxRate": 0.3,
+ *                  "tax_rate": 0.3,
  *                  "delivery": 1000,
  *                  "total": 5980
  *              },
@@ -43,7 +43,7 @@
  *                  "created_at": "2019-05-22 20:56:20",
  *                  "subtotal": 6000,
  *                  "tax": 2100,
- *                  "taxRate": 0.3,
+ *                  "tax_rate": 0.3,
  *                  "delivery": 1000,
  *                  "total": 9100
  *              },
@@ -64,7 +64,7 @@
  *              "created_at": "2019-05-22 20:56:20",
  *              "subtotal": 3600,
  *              "tax": 1380,
- *              "taxRate": 0.3,
+ *              "tax_rate": 0.3,
  *              "delivery": 1000,
  *              "total": 5980
  *          }
@@ -85,7 +85,7 @@
  *                  "created_at": "2019-05-22 20:56:20",
  *                  "subtotal": 3600,
  *                  "tax": 1380,
- *                  "taxRate": 0.3,
+ *                  "tax_rate": 0.3,
  *                  "delivery": 1000,
  *                  "total": 5980
  *              },
@@ -95,7 +95,7 @@
  *                  "created_at": "2019-05-22 20:56:20",
  *                  "subtotal": 2000,
  *                  "tax": 900,
- *                  "taxRate": 0.3,
+ *                  "tax_rate": 0.3,
  *                  "delivery": 1000,
  *                  "total": 3900
  *              },
@@ -105,7 +105,7 @@
  *                  "created_at": "2019-05-22 20:56:20",
  *                  "subtotal": 3200,
  *                  "tax": 1260,
- *                  "taxRate": 0.3,
+ *                  "tax_rate": 0.3,
  *                  "delivery": 1000,
  *                  "total": 5460
  *              }
@@ -138,7 +138,7 @@
  *              "created_at": "2019-05-22 20:56:20",
  *              "subtotal": 3600,
  *              "tax": 1380,
- *              "taxRate": 0.3,
+ *              "tax_rate": 0.3,
  *              "delivery": 1000,
  *              "total": 5980
  *          }
