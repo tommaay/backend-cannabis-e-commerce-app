@@ -11,7 +11,8 @@ exports.up = function(knex, Promise) {
             .onUpdate('CASCADE');
         table.timestamp('created_at').defaultTo(knex.fn.now());
         table.integer('subtotal').notNullable();
-        table.float('tax').notNullable();
+        table.float('tax_rate').notNullable();
+        table.integer('tax').notNullable();
         table.integer('delivery').notNullable();
         table.integer('total').notNullable();
     });
