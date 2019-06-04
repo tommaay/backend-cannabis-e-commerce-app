@@ -13,7 +13,7 @@
  *              "id": 5,
  *              "order_id": 5,
  *              "product_id": 1,
- *              "price_id": 1,
+ *              "spec_id": 1,
  *              "quantity": 1,
  *              "total": 1200
  *          }
@@ -30,7 +30,7 @@
  *                  "id": 1,
  *                  "order_id": 1,
  *                  "product_id": 1,
- *                  "price_id": 1,
+ *                  "spec_id": 1,
  *                  "quantity": 3,
  *                  "total": 3600
  *              },
@@ -38,7 +38,7 @@
  *                  "id": 2,
  *                  "order_id": 2,
  *                  "product_id": 1,
- *                  "price_id": 1,
+ *                  "spec_id": 1,
  *                  "quantity": 5,
  *                  "total": 6000
  *              }
@@ -57,7 +57,7 @@
  *              "id": 5,
  *              "order_id": 5,
  *              "product_id": 1,
- *              "price_id": 1,
+ *              "spec_id": 1,
  *              "quantity": 1,
  *              "total": 1200
  *          }
@@ -76,7 +76,7 @@
  *                  "id": 5,
  *                  "order_id": 5,
  *                  "product_id": 1,
- *                  "price_id": 1,
+ *                  "spec_id": 1,
  *                  "quantity": 1,
  *                  "total": 1200
  *              },
@@ -84,7 +84,7 @@
  *                  "id": 6,
  *                  "order_id": 5,
  *                  "product_id": 2,
- *                  "price_id": 2,
+ *                  "spec_id": 2,
  *                  "quantity": 1,
  *                  "total": 2000
  *              }
@@ -115,7 +115,7 @@
  *              "id": 5,
  *              "order_id": 5,
  *              "product_id": 1,
- *              "price_id": 1,
+ *              "spec_id": 1,
  *              "quantity": 1,
  *              "total": 1200
  *          }
