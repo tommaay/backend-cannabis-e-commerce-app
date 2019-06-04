@@ -11,8 +11,9 @@ module.exports = {
 
 // create a new order
 async function create(orderDetails) {
-    const order = await db('orders').insert(orderDetails);
-    const id = order[0];
+    // Inserts new order and returns an id
+    const order = await db('orders').insert(orderDetails, 'id');
+    const id = parseInt(order);
 
     return db('orders')
         .where({ id: id })
