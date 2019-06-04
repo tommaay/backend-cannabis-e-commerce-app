@@ -12,6 +12,7 @@ exports.up = function(knex, Promise) {
         table.timestamp('created_at').defaultTo(knex.fn.now());
         table.integer('subtotal').notNullable();
         table.float('tax').notNullable();
+        table.integer('delivery').notNullable();
         table.integer('total').notNullable();
     });
 };
