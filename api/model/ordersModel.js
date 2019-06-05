@@ -61,11 +61,35 @@ function getAll() {
     return db('orders');
 }
 
+const specsModel = require('./specsModel');
+
 // get order by id
-function getById(id) {
-    return db('orders')
+async function getById(id) {
+    const order = await db('orders')
         .where({ id: id })
         .first();
+
+    const productOrders = await db('product_orders').where({ order_id: id });
+
+    for (let i = 0; i < productOrders.length; i++) {
+        let p = productOrders[i];
+
+        const product = await db('products')
+            .where({ id: p.product_id })
+            .first();
+
+        const spec = await db('specs').where({ id: p.spec_id });
+
+        p.product = product;
+        p.specs = spec;
+
+        productOrders[i] = p;
+        console.log(productOrders[i]);
+    }
+
+    order.products = productOrders;
+
+    return order;
 }
 
 // get all of the orders by a user's id
