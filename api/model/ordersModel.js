@@ -78,17 +78,35 @@ async function getById(id) {
             .where({ id: p.product_id })
             .first();
 
-        const spec = await db('specs').where({ id: p.spec_id });
+        const spec = await db('specs')
+            .where({ id: p.spec_id })
+            .first();
 
-        p.product = product;
-        p.product.spec = spec;
+        const obj = {
+            product_order_id: p.id,
+            product_id: product.id,
+            name: product.name,
+            image: product.image,
+            spec_id: spec.id,
+            size: spec.size,
+            price: spec.price,
+            quantity: p.quantity,
+            total: p.total,
+        };
 
-        productOrders[i] = p;
+        productOrders[i] = obj;
     }
 
-    order.products = productOrders;
-
-    return order;
+    return {
+        id: order.id,
+        user_id: order.user_id,
+        create_at: order.create_at,
+        delivery: order.delivery,
+        tax_rate: order.tax_rate,
+        tax: order.tax,
+        total: order.total,
+        products: productOrders,
+    };
 }
 
 // get all of the orders by a user's id
