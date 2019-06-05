@@ -83,17 +83,17 @@
  *                           "thc": "15%",
  *                           "cbd": "5%",
  *                           "category": 1,
- *                           "type": 3
- *                       },
- *                       "specs": [
- *                           {
- *                               "id": 1,
- *                               "product_id": 1,
- *                               "size": "1 bar",
- *                               "price": 1200,
- *                               "inventory": 100
- *                           }
- *                       ]
+ *                           "type": 3,
+ *                           "spec": [
+ *                               {
+ *                                   "id": 1,
+ *                                   "product_id": 1,
+ *                                   "size": "1 bar",
+ *                                   "price": 1200,
+ *                                   "inventory": 100
+ *                               }
+ *                           ]
+ *                       }
  *                   },
  *                   {
  *                       "id": 6,
@@ -110,17 +110,17 @@
  *                           "thc": "15%",
  *                           "cbd": "5%",
  *                           "category": 2,
- *                           "type": 1
- *                       },
- *                       "specs": [
- *                           {
- *                               "id": 2,
- *                               "product_id": 2,
- *                               "size": "Half Oz",
- *                               "price": 2000,
- *                               "inventory": 100
- *                           }
- *                       ]
+ *                           "type": 1,
+ *                           "spec": [
+ *                               {
+ *                                   "id": 2,
+ *                                   "product_id": 2,
+ *                                   "size": "Half Oz",
+ *                                   "price": 2000,
+ *                                   "inventory": 100
+ *                               }
+ *                           ]
+ *                       }
  *                   }
  *               ]
  *           }

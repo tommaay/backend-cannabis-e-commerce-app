@@ -81,10 +81,9 @@ async function getById(id) {
         const spec = await db('specs').where({ id: p.spec_id });
 
         p.product = product;
-        p.specs = spec;
+        p.product.spec = spec;
 
         productOrders[i] = p;
-        console.log(productOrders[i]);
     }
 
     order.products = productOrders;
