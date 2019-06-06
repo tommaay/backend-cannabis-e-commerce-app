@@ -82,6 +82,11 @@ router.delete('/:id', async (req, res, next) => {
 router.patch('/:id', async (req, res, next) => {
     const id = req.params.id;
     const updatedInfo = req.body;
+    // hash the password if there is one
+    if (updatedInfo.password) {
+        const hashedPassword = bcrypt.hashSync(userInfo.password, 11);
+        updatedInfo.password = hashedPassword;
+    }
 
     try {
         const user = await usersModel.update(id, updatedInfo);
