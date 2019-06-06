@@ -83,6 +83,15 @@ router.patch('/:id', async (req, res, next) => {
     const id = req.params.id;
     const updatedInfo = req.body;
 
+    console.log(updatedInfo.password);
+    // hash the password to be stored in the database
+    if (updatedInfo.password.length > 0) {
+        const hashedPassword = bcrypt.hashSync(updatedInfo.password, 11);
+        updatedInfo.password = hashedPassword;
+
+        console.log(updatedInfo.password);
+    }
+
     try {
         const user = await usersModel.update(id, updatedInfo);
 
