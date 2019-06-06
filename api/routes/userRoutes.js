@@ -85,7 +85,7 @@ router.patch('/:id', async (req, res, next) => {
 
     console.log(updatedInfo.password);
     // hash the password to be stored in the database
-    if (updatedInfo.password.length > 0) {
+    if (updatedInfo.password) {
         const hashedPassword = bcrypt.hashSync(updatedInfo.password, 11);
         updatedInfo.password = hashedPassword;
 
